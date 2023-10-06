@@ -1,8 +1,6 @@
 // Package imports:
 
 import 'package:intl/intl.dart';
-import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
-
 
 extension StringExtensions on String {
   String capitalize() {
@@ -26,8 +24,8 @@ extension StringExtensions on String {
 
   bool get isEmail {
     return RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",)
-        .hasMatch(this);
+      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+    ).hasMatch(this);
   }
 
   bool get isUsername {
@@ -78,18 +76,18 @@ extension StringExtensions on String {
 
   static String onlyTimeInDate(DateTime date) => DateFormat.jm().format(date);
 
-  String formatPhoneNumber(String isoCode) {
-    final country = CountryManager()
-        .countries
-        .firstWhere((country) => country.countryCode == isoCode);
+  // String formatPhoneNumber(String isoCode) {
+  //   final country = CountryManager()
+  //       .countries
+  //       .firstWhere((country) => country.countryCode == isoCode);
 
-    return FlutterLibphonenumber().formatNumberSync(
-      this,
-      country: country,
-      phoneNumberFormat: PhoneNumberFormat.national,
-     
-    );
-  }
+  //   return FlutterLibphonenumber().formatNumberSync(
+  //     this,
+  //     country: country,
+  //     phoneNumberFormat: PhoneNumberFormat.national,
+
+  //   );
+  // }
 
   String get extractFirstName {
     final words = split(' ');

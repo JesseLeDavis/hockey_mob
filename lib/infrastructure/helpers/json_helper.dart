@@ -38,7 +38,7 @@ class JsonHelper {
 
   static List<String> dateRangeToJson(DateTimeRange dateTimeRange) => [
         DateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").format(dateTimeRange.start),
-        DateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").format(dateTimeRange.end)
+        DateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").format(dateTimeRange.end),
       ];
 
   static DateTimeRange dateRangeFromJson(List<String> dateTimeList) =>

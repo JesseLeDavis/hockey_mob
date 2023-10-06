@@ -20,7 +20,7 @@ class EmailInput extends FormzInput<String, EmailInputError> {
 
 extension EmailInputErrorExtension on EmailInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
     switch (error) {
       case EmailInputError.invalid:
         return 'This email has an invalid format';

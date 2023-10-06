@@ -33,7 +33,7 @@ class FlavorBanner extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

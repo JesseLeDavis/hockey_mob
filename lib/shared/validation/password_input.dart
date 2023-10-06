@@ -24,7 +24,7 @@ class PasswordInput extends FormzInput<String, PasswordInputError> {
 
 extension PasswordInputExtension on PasswordInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
     switch (error) {
       case PasswordInputError.invalid:
         return '';

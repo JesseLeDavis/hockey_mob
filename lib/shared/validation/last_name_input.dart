@@ -24,7 +24,7 @@ class LastNameInput extends FormzInput<String, LastNameInputError> {
 
 extension LastNameInputExtension on LastNameInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
     switch (error) {
       case LastNameInputError.empty:
         return 'Please enter a last name';

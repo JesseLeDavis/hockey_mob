@@ -41,11 +41,11 @@ abstract class INotification {
     try {
       await _firebaseMessaging.unsubscribeFromTopic(topic);
     } catch (e) {
-      _logger.e(
-        'There was an error unsubscribing to a topic: $topic, ERROR: $e',
-        e,
-        StackTrace.current,
-      );
+      // _logger.e(
+      //   'There was an error unsubscribing to a topic: $topic, ERROR: $e',
+      //   e,
+      //   StackTrace.current,
+      // );
     }
   }
 }

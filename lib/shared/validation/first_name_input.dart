@@ -24,7 +24,7 @@ class FirstNameInput extends FormzInput<String, FirstNameInputError> {
 
 extension FirstNameInputExtension on FirstNameInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
     switch (error) {
       case FirstNameInputError.empty:
         return 'Please enter a first name';

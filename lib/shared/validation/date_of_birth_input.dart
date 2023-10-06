@@ -45,7 +45,7 @@ class DateOfBirthInput extends FormzInput<String, DateOfBirthInputError> {
 
 extension DateOfBirthErrorExtention on DateOfBirthInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
 
     switch (error) {
       case DateOfBirthInputError.empty:

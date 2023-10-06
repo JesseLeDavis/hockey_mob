@@ -19,7 +19,7 @@ class FormInput extends FormzInput<String, FormInputError> {
 
 extension FormInputErrorExtension on FormInput {
   String? get errorMessage {
-    if (pure) return null;
+    if (isPure) return null;
 
     switch (error) {
       case FormInputError.empty:

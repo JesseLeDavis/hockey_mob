@@ -41,9 +41,9 @@ Future<void> bootstrap({
 
   configureDependencies(EnvironmentConfig.appEnvironment.toFormattedString());
 
-  FlutterError.onError = (details) {
-    logger!.e(details.exceptionAsString(), details.exception, details.stack);
-  };
+  // FlutterError.onError = (details) {
+  //   logger!.e(details.exceptionAsString(), details.exception, details.stack);
+  // };
 
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],

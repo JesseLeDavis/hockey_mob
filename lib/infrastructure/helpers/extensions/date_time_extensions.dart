@@ -27,7 +27,7 @@ extension DateRangeExtension on DateTimeRange {
     'September',
     'October',
     'November',
-    'December'
+    'December',
   ];
   String get toFormattedString =>
       '${start.day} ${_months[start.month - 1].substring(0, 3)} - ${end.day} ${_months[end.month - 1].substring(0, 3)}';
