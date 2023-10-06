@@ -1,0 +1,73 @@
+brun: flutter packages pub run build_runner build --delete-conflicting-outputs
+
+wrun: flutter packages pub run build_runner watch --delete-conflicting-outputs
+
+cbrun: flutter packages pub run build_runner clean build
+
+cpod:
+  - flutter clean
+  - cd ios && pod deintegrate
+  - cd ios && rm -f Podfile.lock
+  - flutter packages get
+  - cd ios && pod install --repo-update
+
+cproj:
+  - $cpod
+  - $cdep
+
+cdep:
+  - flutter clean
+  - flutter pub upgrade
+
+# TODO: look into having the flavor determine the FLUTTER_TARGET
+bundle:
+  - $cproj
+  - flutter build appbundle -t lib/main_production.dart --flavor production
+  - open build/app/outputs/bundle/productionRelease
+
+packages: flutter packages get
+
+syncbranch:
+  - REMOTE="$(git remote)/main"; echo SYNCING WITH \"$REMOTE\"
+  - git merge --no-ff $REMOTE
+
+cgit:
+  - "git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
+
+sort: flutter pub run import_sorter:main
+
+# lcl:
+#   - cd packages/lcl && flutter pub run intl_utils:localizely_download
+
+format:
+  - flutter format lib test
+
+prep:
+  - flutter analyze lib test
+  - $format
+  - $sort
+  # - $lcl
+
+coverage: # requires `brew install lcov`
+  - flutter test --coverage
+  - genhtml -o coverage coverage/lcov.info
+  - open coverage/index.html
+
+# requires `dart pub global activate pub_version_plus`
+vmajor: pubversion major
+vminor: pubversion minor
+vpatch: pubversion patch
+vbuild: pubversion build
+
+# Starts a dev build on codemagic based on dev branch
+cidev: |
+  echo `curl -H "Content-Type: application/json" -H "x-auth-token: beDs6J7cWJocArmKXczTNBS2JJql9CJRBba0WXx1LFc" --data '{"appId": "61266b2214aea1d136b750db","workflowId": "61266b2214aea1d136b750da","branch": "develop"}' https://api.codemagic.io/builds` | pbcopy
+  echo "Started Development build! | Copied response to clipboard!"
+
+ciprod: |
+  echo `curl -H "Content-Type: application/json" -H "x-auth-token: beDs6J7cWJocArmKXczTNBS2JJql9CJRBba0WXx1LFc" --data '{"appId": "61266b2214aea1d136b750db","workflowId": "612a39c9a9d3bf25f330b6de","branch": "main"}' https://api.codemagic.io/builds` | pbcopy
+  echo "Started Development build! | Copied response to clipboard!"
+
+ciapp: |
+  echo `curl -H "Content-Type: application/json" -H "x-auth-token: beDs6J7cWJocArmKXczTNBS2JJql9CJRBba0WXx1LFc" --request GET https://api.codemagic.io/apps/61266b2214aea1d136b750db` | pbcopy
+  echo "Copied response to clipboard"
