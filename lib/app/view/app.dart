@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/flavor.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/flavor_banner.dart';
+import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/routes/app_routes.dart';
+import 'package:flutter_project_template_firebase/routes/router.dart';
 import 'package:go_router/go_router.dart';
 
 class App extends StatelessWidget {
@@ -13,10 +15,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: const [],
-      child: _App(flavor: flavor),
-    );
+    return _App(flavor: flavor);
   }
 }
 
@@ -30,26 +29,22 @@ class _App extends StatefulWidget {
 }
 
 class _AppState extends State<_App> {
-  late final GoRouter router;
+  late final GoRouter _goRouter;
 
   @override
   void initState() {
     super.initState();
 
-    router = appRoutes();
+    _goRouter = getIt<AppRouter>().router;
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      builder: (context, child) => FlavorBanner(
-        flavor: widget.flavor,
-        child: child!,
-      ),
       title: 'app-name',
       key: const Key(''),
       debugShowCheckedModeBanner: false,
-      routerConfig: router,
+      routerConfig: _goRouter,
     );
   }
 }

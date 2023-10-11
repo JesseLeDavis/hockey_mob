@@ -127,22 +127,22 @@ class _$MobileSizeCopyWithImpl<$Res, $Val extends MobileSize>
 }
 
 /// @nodoc
-abstract class _$$_MobileSizeLandscapeCopyWith<$Res>
+abstract class _$$MobileSizeLandscapeImplCopyWith<$Res>
     implements $MobileSizeCopyWith<$Res> {
-  factory _$$_MobileSizeLandscapeCopyWith(_$_MobileSizeLandscape value,
-          $Res Function(_$_MobileSizeLandscape) then) =
-      __$$_MobileSizeLandscapeCopyWithImpl<$Res>;
+  factory _$$MobileSizeLandscapeImplCopyWith(_$MobileSizeLandscapeImpl value,
+          $Res Function(_$MobileSizeLandscapeImpl) then) =
+      __$$MobileSizeLandscapeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double small, double medium, double large});
 }
 
 /// @nodoc
-class __$$_MobileSizeLandscapeCopyWithImpl<$Res>
-    extends _$MobileSizeCopyWithImpl<$Res, _$_MobileSizeLandscape>
-    implements _$$_MobileSizeLandscapeCopyWith<$Res> {
-  __$$_MobileSizeLandscapeCopyWithImpl(_$_MobileSizeLandscape _value,
-      $Res Function(_$_MobileSizeLandscape) _then)
+class __$$MobileSizeLandscapeImplCopyWithImpl<$Res>
+    extends _$MobileSizeCopyWithImpl<$Res, _$MobileSizeLandscapeImpl>
+    implements _$$MobileSizeLandscapeImplCopyWith<$Res> {
+  __$$MobileSizeLandscapeImplCopyWithImpl(_$MobileSizeLandscapeImpl _value,
+      $Res Function(_$MobileSizeLandscapeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -152,7 +152,7 @@ class __$$_MobileSizeLandscapeCopyWithImpl<$Res>
     Object? medium = null,
     Object? large = null,
   }) {
-    return _then(_$_MobileSizeLandscape(
+    return _then(_$MobileSizeLandscapeImpl(
       small: null == small
           ? _value.small
           : small // ignore: cast_nullable_to_non_nullable
@@ -171,16 +171,16 @@ class __$$_MobileSizeLandscapeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MobileSizeLandscape implements _MobileSizeLandscape {
-  const _$_MobileSizeLandscape(
+class _$MobileSizeLandscapeImpl implements _MobileSizeLandscape {
+  const _$MobileSizeLandscapeImpl(
       {this.small = 600,
       this.medium = 720,
       this.large = 960,
       final String? $type})
       : $type = $type ?? 'landscape';
 
-  factory _$_MobileSizeLandscape.fromJson(Map<String, dynamic> json) =>
-      _$$_MobileSizeLandscapeFromJson(json);
+  factory _$MobileSizeLandscapeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MobileSizeLandscapeImplFromJson(json);
 
   /// Maximum size of small mobile phone
   @override
@@ -209,7 +209,7 @@ class _$_MobileSizeLandscape implements _MobileSizeLandscape {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MobileSizeLandscape &&
+            other is _$MobileSizeLandscapeImpl &&
             (identical(other.small, small) || other.small == small) &&
             (identical(other.medium, medium) || other.medium == medium) &&
             (identical(other.large, large) || other.large == large));
@@ -222,8 +222,8 @@ class _$_MobileSizeLandscape implements _MobileSizeLandscape {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MobileSizeLandscapeCopyWith<_$_MobileSizeLandscape> get copyWith =>
-      __$$_MobileSizeLandscapeCopyWithImpl<_$_MobileSizeLandscape>(
+  _$$MobileSizeLandscapeImplCopyWith<_$MobileSizeLandscapeImpl> get copyWith =>
+      __$$MobileSizeLandscapeImplCopyWithImpl<_$MobileSizeLandscapeImpl>(
           this, _$identity);
 
   @override
@@ -292,7 +292,7 @@ class _$_MobileSizeLandscape implements _MobileSizeLandscape {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MobileSizeLandscapeToJson(
+    return _$$MobileSizeLandscapeImplToJson(
       this,
     );
   }
@@ -302,10 +302,10 @@ abstract class _MobileSizeLandscape implements MobileSize {
   const factory _MobileSizeLandscape(
       {final double small,
       final double medium,
-      final double large}) = _$_MobileSizeLandscape;
+      final double large}) = _$MobileSizeLandscapeImpl;
 
   factory _MobileSizeLandscape.fromJson(Map<String, dynamic> json) =
-      _$_MobileSizeLandscape.fromJson;
+      _$MobileSizeLandscapeImpl.fromJson;
 
   @override
 
@@ -321,27 +321,27 @@ abstract class _MobileSizeLandscape implements MobileSize {
   double get large;
   @override
   @JsonKey(ignore: true)
-  _$$_MobileSizeLandscapeCopyWith<_$_MobileSizeLandscape> get copyWith =>
+  _$$MobileSizeLandscapeImplCopyWith<_$MobileSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_MobileSizePortraitCopyWith<$Res>
+abstract class _$$MobileSizePortraitImplCopyWith<$Res>
     implements $MobileSizeCopyWith<$Res> {
-  factory _$$_MobileSizePortraitCopyWith(_$_MobileSizePortrait value,
-          $Res Function(_$_MobileSizePortrait) then) =
-      __$$_MobileSizePortraitCopyWithImpl<$Res>;
+  factory _$$MobileSizePortraitImplCopyWith(_$MobileSizePortraitImpl value,
+          $Res Function(_$MobileSizePortraitImpl) then) =
+      __$$MobileSizePortraitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double small, double medium, double large});
 }
 
 /// @nodoc
-class __$$_MobileSizePortraitCopyWithImpl<$Res>
-    extends _$MobileSizeCopyWithImpl<$Res, _$_MobileSizePortrait>
-    implements _$$_MobileSizePortraitCopyWith<$Res> {
-  __$$_MobileSizePortraitCopyWithImpl(
-      _$_MobileSizePortrait _value, $Res Function(_$_MobileSizePortrait) _then)
+class __$$MobileSizePortraitImplCopyWithImpl<$Res>
+    extends _$MobileSizeCopyWithImpl<$Res, _$MobileSizePortraitImpl>
+    implements _$$MobileSizePortraitImplCopyWith<$Res> {
+  __$$MobileSizePortraitImplCopyWithImpl(_$MobileSizePortraitImpl _value,
+      $Res Function(_$MobileSizePortraitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -351,7 +351,7 @@ class __$$_MobileSizePortraitCopyWithImpl<$Res>
     Object? medium = null,
     Object? large = null,
   }) {
-    return _then(_$_MobileSizePortrait(
+    return _then(_$MobileSizePortraitImpl(
       small: null == small
           ? _value.small
           : small // ignore: cast_nullable_to_non_nullable
@@ -370,16 +370,16 @@ class __$$_MobileSizePortraitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MobileSizePortrait implements _MobileSizePortrait {
-  const _$_MobileSizePortrait(
+class _$MobileSizePortraitImpl implements _MobileSizePortrait {
+  const _$MobileSizePortraitImpl(
       {this.small = 360,
       this.medium = 400,
       this.large = 600,
       final String? $type})
       : $type = $type ?? 'portrait';
 
-  factory _$_MobileSizePortrait.fromJson(Map<String, dynamic> json) =>
-      _$$_MobileSizePortraitFromJson(json);
+  factory _$MobileSizePortraitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MobileSizePortraitImplFromJson(json);
 
   /// Maximum size of small mobile phone
   @override
@@ -408,7 +408,7 @@ class _$_MobileSizePortrait implements _MobileSizePortrait {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MobileSizePortrait &&
+            other is _$MobileSizePortraitImpl &&
             (identical(other.small, small) || other.small == small) &&
             (identical(other.medium, medium) || other.medium == medium) &&
             (identical(other.large, large) || other.large == large));
@@ -421,8 +421,8 @@ class _$_MobileSizePortrait implements _MobileSizePortrait {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MobileSizePortraitCopyWith<_$_MobileSizePortrait> get copyWith =>
-      __$$_MobileSizePortraitCopyWithImpl<_$_MobileSizePortrait>(
+  _$$MobileSizePortraitImplCopyWith<_$MobileSizePortraitImpl> get copyWith =>
+      __$$MobileSizePortraitImplCopyWithImpl<_$MobileSizePortraitImpl>(
           this, _$identity);
 
   @override
@@ -491,7 +491,7 @@ class _$_MobileSizePortrait implements _MobileSizePortrait {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MobileSizePortraitToJson(
+    return _$$MobileSizePortraitImplToJson(
       this,
     );
   }
@@ -501,10 +501,10 @@ abstract class _MobileSizePortrait implements MobileSize {
   const factory _MobileSizePortrait(
       {final double small,
       final double medium,
-      final double large}) = _$_MobileSizePortrait;
+      final double large}) = _$MobileSizePortraitImpl;
 
   factory _MobileSizePortrait.fromJson(Map<String, dynamic> json) =
-      _$_MobileSizePortrait.fromJson;
+      _$MobileSizePortraitImpl.fromJson;
 
   @override
 
@@ -520,7 +520,7 @@ abstract class _MobileSizePortrait implements MobileSize {
   double get large;
   @override
   @JsonKey(ignore: true)
-  _$$_MobileSizePortraitCopyWith<_$_MobileSizePortrait> get copyWith =>
+  _$$MobileSizePortraitImplCopyWith<_$MobileSizePortraitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -627,22 +627,22 @@ class _$TabletSizeCopyWithImpl<$Res, $Val extends TabletSize>
 }
 
 /// @nodoc
-abstract class _$$_TabletSizeLandscapeCopyWith<$Res>
+abstract class _$$TabletSizeLandscapeImplCopyWith<$Res>
     implements $TabletSizeCopyWith<$Res> {
-  factory _$$_TabletSizeLandscapeCopyWith(_$_TabletSizeLandscape value,
-          $Res Function(_$_TabletSizeLandscape) then) =
-      __$$_TabletSizeLandscapeCopyWithImpl<$Res>;
+  factory _$$TabletSizeLandscapeImplCopyWith(_$TabletSizeLandscapeImpl value,
+          $Res Function(_$TabletSizeLandscapeImpl) then) =
+      __$$TabletSizeLandscapeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double small, double large});
 }
 
 /// @nodoc
-class __$$_TabletSizeLandscapeCopyWithImpl<$Res>
-    extends _$TabletSizeCopyWithImpl<$Res, _$_TabletSizeLandscape>
-    implements _$$_TabletSizeLandscapeCopyWith<$Res> {
-  __$$_TabletSizeLandscapeCopyWithImpl(_$_TabletSizeLandscape _value,
-      $Res Function(_$_TabletSizeLandscape) _then)
+class __$$TabletSizeLandscapeImplCopyWithImpl<$Res>
+    extends _$TabletSizeCopyWithImpl<$Res, _$TabletSizeLandscapeImpl>
+    implements _$$TabletSizeLandscapeImplCopyWith<$Res> {
+  __$$TabletSizeLandscapeImplCopyWithImpl(_$TabletSizeLandscapeImpl _value,
+      $Res Function(_$TabletSizeLandscapeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -651,7 +651,7 @@ class __$$_TabletSizeLandscapeCopyWithImpl<$Res>
     Object? small = null,
     Object? large = null,
   }) {
-    return _then(_$_TabletSizeLandscape(
+    return _then(_$TabletSizeLandscapeImpl(
       small: null == small
           ? _value.small
           : small // ignore: cast_nullable_to_non_nullable
@@ -666,13 +666,13 @@ class __$$_TabletSizeLandscapeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TabletSizeLandscape implements _TabletSizeLandscape {
-  const _$_TabletSizeLandscape(
+class _$TabletSizeLandscapeImpl implements _TabletSizeLandscape {
+  const _$TabletSizeLandscapeImpl(
       {this.small = 1024, this.large = 1280, final String? $type})
       : $type = $type ?? 'landscape';
 
-  factory _$_TabletSizeLandscape.fromJson(Map<String, dynamic> json) =>
-      _$$_TabletSizeLandscapeFromJson(json);
+  factory _$TabletSizeLandscapeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TabletSizeLandscapeImplFromJson(json);
 
   /// Maximum size of small tablet
   @override
@@ -696,7 +696,7 @@ class _$_TabletSizeLandscape implements _TabletSizeLandscape {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TabletSizeLandscape &&
+            other is _$TabletSizeLandscapeImpl &&
             (identical(other.small, small) || other.small == small) &&
             (identical(other.large, large) || other.large == large));
   }
@@ -708,8 +708,8 @@ class _$_TabletSizeLandscape implements _TabletSizeLandscape {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TabletSizeLandscapeCopyWith<_$_TabletSizeLandscape> get copyWith =>
-      __$$_TabletSizeLandscapeCopyWithImpl<_$_TabletSizeLandscape>(
+  _$$TabletSizeLandscapeImplCopyWith<_$TabletSizeLandscapeImpl> get copyWith =>
+      __$$TabletSizeLandscapeImplCopyWithImpl<_$TabletSizeLandscapeImpl>(
           this, _$identity);
 
   @override
@@ -776,7 +776,7 @@ class _$_TabletSizeLandscape implements _TabletSizeLandscape {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TabletSizeLandscapeToJson(
+    return _$$TabletSizeLandscapeImplToJson(
       this,
     );
   }
@@ -784,10 +784,10 @@ class _$_TabletSizeLandscape implements _TabletSizeLandscape {
 
 abstract class _TabletSizeLandscape implements TabletSize {
   const factory _TabletSizeLandscape({final double small, final double large}) =
-      _$_TabletSizeLandscape;
+      _$TabletSizeLandscapeImpl;
 
   factory _TabletSizeLandscape.fromJson(Map<String, dynamic> json) =
-      _$_TabletSizeLandscape.fromJson;
+      _$TabletSizeLandscapeImpl.fromJson;
 
   @override
 
@@ -799,27 +799,27 @@ abstract class _TabletSizeLandscape implements TabletSize {
   double get large;
   @override
   @JsonKey(ignore: true)
-  _$$_TabletSizeLandscapeCopyWith<_$_TabletSizeLandscape> get copyWith =>
+  _$$TabletSizeLandscapeImplCopyWith<_$TabletSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_TabletSizePortraitCopyWith<$Res>
+abstract class _$$TabletSizePortraitImplCopyWith<$Res>
     implements $TabletSizeCopyWith<$Res> {
-  factory _$$_TabletSizePortraitCopyWith(_$_TabletSizePortrait value,
-          $Res Function(_$_TabletSizePortrait) then) =
-      __$$_TabletSizePortraitCopyWithImpl<$Res>;
+  factory _$$TabletSizePortraitImplCopyWith(_$TabletSizePortraitImpl value,
+          $Res Function(_$TabletSizePortraitImpl) then) =
+      __$$TabletSizePortraitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double small, double large});
 }
 
 /// @nodoc
-class __$$_TabletSizePortraitCopyWithImpl<$Res>
-    extends _$TabletSizeCopyWithImpl<$Res, _$_TabletSizePortrait>
-    implements _$$_TabletSizePortraitCopyWith<$Res> {
-  __$$_TabletSizePortraitCopyWithImpl(
-      _$_TabletSizePortrait _value, $Res Function(_$_TabletSizePortrait) _then)
+class __$$TabletSizePortraitImplCopyWithImpl<$Res>
+    extends _$TabletSizeCopyWithImpl<$Res, _$TabletSizePortraitImpl>
+    implements _$$TabletSizePortraitImplCopyWith<$Res> {
+  __$$TabletSizePortraitImplCopyWithImpl(_$TabletSizePortraitImpl _value,
+      $Res Function(_$TabletSizePortraitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -828,7 +828,7 @@ class __$$_TabletSizePortraitCopyWithImpl<$Res>
     Object? small = null,
     Object? large = null,
   }) {
-    return _then(_$_TabletSizePortrait(
+    return _then(_$TabletSizePortraitImpl(
       small: null == small
           ? _value.small
           : small // ignore: cast_nullable_to_non_nullable
@@ -843,13 +843,13 @@ class __$$_TabletSizePortraitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TabletSizePortrait implements _TabletSizePortrait {
-  const _$_TabletSizePortrait(
+class _$TabletSizePortraitImpl implements _TabletSizePortrait {
+  const _$TabletSizePortraitImpl(
       {this.small = 720, this.large = 840, final String? $type})
       : $type = $type ?? 'portrait';
 
-  factory _$_TabletSizePortrait.fromJson(Map<String, dynamic> json) =>
-      _$$_TabletSizePortraitFromJson(json);
+  factory _$TabletSizePortraitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TabletSizePortraitImplFromJson(json);
 
   /// Maximum size of small tablet
   @override
@@ -873,7 +873,7 @@ class _$_TabletSizePortrait implements _TabletSizePortrait {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TabletSizePortrait &&
+            other is _$TabletSizePortraitImpl &&
             (identical(other.small, small) || other.small == small) &&
             (identical(other.large, large) || other.large == large));
   }
@@ -885,8 +885,8 @@ class _$_TabletSizePortrait implements _TabletSizePortrait {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TabletSizePortraitCopyWith<_$_TabletSizePortrait> get copyWith =>
-      __$$_TabletSizePortraitCopyWithImpl<_$_TabletSizePortrait>(
+  _$$TabletSizePortraitImplCopyWith<_$TabletSizePortraitImpl> get copyWith =>
+      __$$TabletSizePortraitImplCopyWithImpl<_$TabletSizePortraitImpl>(
           this, _$identity);
 
   @override
@@ -953,7 +953,7 @@ class _$_TabletSizePortrait implements _TabletSizePortrait {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TabletSizePortraitToJson(
+    return _$$TabletSizePortraitImplToJson(
       this,
     );
   }
@@ -961,10 +961,10 @@ class _$_TabletSizePortrait implements _TabletSizePortrait {
 
 abstract class _TabletSizePortrait implements TabletSize {
   const factory _TabletSizePortrait({final double small, final double large}) =
-      _$_TabletSizePortrait;
+      _$TabletSizePortraitImpl;
 
   factory _TabletSizePortrait.fromJson(Map<String, dynamic> json) =
-      _$_TabletSizePortrait.fromJson;
+      _$TabletSizePortraitImpl.fromJson;
 
   @override
 
@@ -976,7 +976,7 @@ abstract class _TabletSizePortrait implements TabletSize {
   double get large;
   @override
   @JsonKey(ignore: true)
-  _$$_TabletSizePortraitCopyWith<_$_TabletSizePortrait> get copyWith =>
+  _$$TabletSizePortraitImplCopyWith<_$TabletSizePortraitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1028,22 +1028,22 @@ class _$WatchSizeCopyWithImpl<$Res, $Val extends WatchSize>
 }
 
 /// @nodoc
-abstract class _$$_WatchSizeLandscapeCopyWith<$Res>
+abstract class _$$WatchSizeLandscapeImplCopyWith<$Res>
     implements $WatchSizeCopyWith<$Res> {
-  factory _$$_WatchSizeLandscapeCopyWith(_$_WatchSizeLandscape value,
-          $Res Function(_$_WatchSizeLandscape) then) =
-      __$$_WatchSizeLandscapeCopyWithImpl<$Res>;
+  factory _$$WatchSizeLandscapeImplCopyWith(_$WatchSizeLandscapeImpl value,
+          $Res Function(_$WatchSizeLandscapeImpl) then) =
+      __$$WatchSizeLandscapeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({double medium});
 }
 
 /// @nodoc
-class __$$_WatchSizeLandscapeCopyWithImpl<$Res>
-    extends _$WatchSizeCopyWithImpl<$Res, _$_WatchSizeLandscape>
-    implements _$$_WatchSizeLandscapeCopyWith<$Res> {
-  __$$_WatchSizeLandscapeCopyWithImpl(
-      _$_WatchSizeLandscape _value, $Res Function(_$_WatchSizeLandscape) _then)
+class __$$WatchSizeLandscapeImplCopyWithImpl<$Res>
+    extends _$WatchSizeCopyWithImpl<$Res, _$WatchSizeLandscapeImpl>
+    implements _$$WatchSizeLandscapeImplCopyWith<$Res> {
+  __$$WatchSizeLandscapeImplCopyWithImpl(_$WatchSizeLandscapeImpl _value,
+      $Res Function(_$WatchSizeLandscapeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1051,7 +1051,7 @@ class __$$_WatchSizeLandscapeCopyWithImpl<$Res>
   $Res call({
     Object? medium = null,
   }) {
-    return _then(_$_WatchSizeLandscape(
+    return _then(_$WatchSizeLandscapeImpl(
       medium: null == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
@@ -1062,11 +1062,11 @@ class __$$_WatchSizeLandscapeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_WatchSizeLandscape implements _WatchSizeLandscape {
-  const _$_WatchSizeLandscape({this.medium = 220});
+class _$WatchSizeLandscapeImpl implements _WatchSizeLandscape {
+  const _$WatchSizeLandscapeImpl({this.medium = 220});
 
-  factory _$_WatchSizeLandscape.fromJson(Map<String, dynamic> json) =>
-      _$$_WatchSizeLandscapeFromJson(json);
+  factory _$WatchSizeLandscapeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WatchSizeLandscapeImplFromJson(json);
 
   /// Maximum size of small mobile phone
   @override
@@ -1082,7 +1082,7 @@ class _$_WatchSizeLandscape implements _WatchSizeLandscape {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WatchSizeLandscape &&
+            other is _$WatchSizeLandscapeImpl &&
             (identical(other.medium, medium) || other.medium == medium));
   }
 
@@ -1093,13 +1093,13 @@ class _$_WatchSizeLandscape implements _WatchSizeLandscape {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WatchSizeLandscapeCopyWith<_$_WatchSizeLandscape> get copyWith =>
-      __$$_WatchSizeLandscapeCopyWithImpl<_$_WatchSizeLandscape>(
+  _$$WatchSizeLandscapeImplCopyWith<_$WatchSizeLandscapeImpl> get copyWith =>
+      __$$WatchSizeLandscapeImplCopyWithImpl<_$WatchSizeLandscapeImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WatchSizeLandscapeToJson(
+    return _$$WatchSizeLandscapeImplToJson(
       this,
     );
   }
@@ -1107,10 +1107,10 @@ class _$_WatchSizeLandscape implements _WatchSizeLandscape {
 
 abstract class _WatchSizeLandscape implements WatchSize {
   const factory _WatchSizeLandscape({final double medium}) =
-      _$_WatchSizeLandscape;
+      _$WatchSizeLandscapeImpl;
 
   factory _WatchSizeLandscape.fromJson(Map<String, dynamic> json) =
-      _$_WatchSizeLandscape.fromJson;
+      _$WatchSizeLandscapeImpl.fromJson;
 
   @override
 
@@ -1118,6 +1118,6 @@ abstract class _WatchSizeLandscape implements WatchSize {
   double get medium;
   @override
   @JsonKey(ignore: true)
-  _$$_WatchSizeLandscapeCopyWith<_$_WatchSizeLandscape> get copyWith =>
+  _$$WatchSizeLandscapeImplCopyWith<_$WatchSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

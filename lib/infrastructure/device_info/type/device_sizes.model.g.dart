@@ -6,17 +6,17 @@ part of 'device_sizes.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MobileSizeLandscape _$$_MobileSizeLandscapeFromJson(
+_$MobileSizeLandscapeImpl _$$MobileSizeLandscapeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MobileSizeLandscape(
+    _$MobileSizeLandscapeImpl(
       small: (json['small'] as num?)?.toDouble() ?? 600,
       medium: (json['medium'] as num?)?.toDouble() ?? 720,
       large: (json['large'] as num?)?.toDouble() ?? 960,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_MobileSizeLandscapeToJson(
-        _$_MobileSizeLandscape instance) =>
+Map<String, dynamic> _$$MobileSizeLandscapeImplToJson(
+        _$MobileSizeLandscapeImpl instance) =>
     <String, dynamic>{
       'small': instance.small,
       'medium': instance.medium,
@@ -24,17 +24,17 @@ Map<String, dynamic> _$$_MobileSizeLandscapeToJson(
       'runtimeType': instance.$type,
     };
 
-_$_MobileSizePortrait _$$_MobileSizePortraitFromJson(
+_$MobileSizePortraitImpl _$$MobileSizePortraitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MobileSizePortrait(
+    _$MobileSizePortraitImpl(
       small: (json['small'] as num?)?.toDouble() ?? 360,
       medium: (json['medium'] as num?)?.toDouble() ?? 400,
       large: (json['large'] as num?)?.toDouble() ?? 600,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_MobileSizePortraitToJson(
-        _$_MobileSizePortrait instance) =>
+Map<String, dynamic> _$$MobileSizePortraitImplToJson(
+        _$MobileSizePortraitImpl instance) =>
     <String, dynamic>{
       'small': instance.small,
       'medium': instance.medium,
@@ -42,46 +42,46 @@ Map<String, dynamic> _$$_MobileSizePortraitToJson(
       'runtimeType': instance.$type,
     };
 
-_$_TabletSizeLandscape _$$_TabletSizeLandscapeFromJson(
+_$TabletSizeLandscapeImpl _$$TabletSizeLandscapeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TabletSizeLandscape(
+    _$TabletSizeLandscapeImpl(
       small: (json['small'] as num?)?.toDouble() ?? 1024,
       large: (json['large'] as num?)?.toDouble() ?? 1280,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_TabletSizeLandscapeToJson(
-        _$_TabletSizeLandscape instance) =>
+Map<String, dynamic> _$$TabletSizeLandscapeImplToJson(
+        _$TabletSizeLandscapeImpl instance) =>
     <String, dynamic>{
       'small': instance.small,
       'large': instance.large,
       'runtimeType': instance.$type,
     };
 
-_$_TabletSizePortrait _$$_TabletSizePortraitFromJson(
+_$TabletSizePortraitImpl _$$TabletSizePortraitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TabletSizePortrait(
+    _$TabletSizePortraitImpl(
       small: (json['small'] as num?)?.toDouble() ?? 720,
       large: (json['large'] as num?)?.toDouble() ?? 840,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_TabletSizePortraitToJson(
-        _$_TabletSizePortrait instance) =>
+Map<String, dynamic> _$$TabletSizePortraitImplToJson(
+        _$TabletSizePortraitImpl instance) =>
     <String, dynamic>{
       'small': instance.small,
       'large': instance.large,
       'runtimeType': instance.$type,
     };
 
-_$_WatchSizeLandscape _$$_WatchSizeLandscapeFromJson(
+_$WatchSizeLandscapeImpl _$$WatchSizeLandscapeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_WatchSizeLandscape(
+    _$WatchSizeLandscapeImpl(
       medium: (json['medium'] as num?)?.toDouble() ?? 220,
     );
 
-Map<String, dynamic> _$$_WatchSizeLandscapeToJson(
-        _$_WatchSizeLandscape instance) =>
+Map<String, dynamic> _$$WatchSizeLandscapeImplToJson(
+        _$WatchSizeLandscapeImpl instance) =>
     <String, dynamic>{
       'medium': instance.medium,
     };

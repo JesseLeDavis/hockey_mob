@@ -37,7 +37,7 @@ Future<void> bootstrap({
   logger ??= Logger();
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   configureDependencies(EnvironmentConfig.appEnvironment.toFormattedString());
 

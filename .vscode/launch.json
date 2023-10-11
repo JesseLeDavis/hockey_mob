@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Development",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "lib/main.dart",
+                "--dart-define",
+                "ENVIRONMENT=dev",
+            ]
+        },
+    ]
+}

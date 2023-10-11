@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'country_code.model.dart';
 
@@ -39,77 +39,81 @@ mixin _$CountryCode {
 abstract class $CountryCodeCopyWith<$Res> {
   factory $CountryCodeCopyWith(
           CountryCode value, $Res Function(CountryCode) then) =
-      _$CountryCodeCopyWithImpl<$Res>;
+      _$CountryCodeCopyWithImpl<$Res, CountryCode>;
+  @useResult
   $Res call({String name, String code, String iso});
 }
 
 /// @nodoc
-class _$CountryCodeCopyWithImpl<$Res> implements $CountryCodeCopyWith<$Res> {
+class _$CountryCodeCopyWithImpl<$Res, $Val extends CountryCode>
+    implements $CountryCodeCopyWith<$Res> {
   _$CountryCodeCopyWithImpl(this._value, this._then);
 
-  final CountryCode _value;
   // ignore: unused_field
-  final $Res Function(CountryCode) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? code = freezed,
-    Object? iso = freezed,
+    Object? name = null,
+    Object? code = null,
+    Object? iso = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      iso: iso == freezed
+      iso: null == iso
           ? _value.iso
           : iso // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_CountryCodeCopyWith<$Res>
+abstract class _$$CountryCodeImplCopyWith<$Res>
     implements $CountryCodeCopyWith<$Res> {
-  factory _$$_CountryCodeCopyWith(
-          _$_CountryCode value, $Res Function(_$_CountryCode) then) =
-      __$$_CountryCodeCopyWithImpl<$Res>;
+  factory _$$CountryCodeImplCopyWith(
+          _$CountryCodeImpl value, $Res Function(_$CountryCodeImpl) then) =
+      __$$CountryCodeImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String name, String code, String iso});
 }
 
 /// @nodoc
-class __$$_CountryCodeCopyWithImpl<$Res> extends _$CountryCodeCopyWithImpl<$Res>
-    implements _$$_CountryCodeCopyWith<$Res> {
-  __$$_CountryCodeCopyWithImpl(
-      _$_CountryCode _value, $Res Function(_$_CountryCode) _then)
-      : super(_value, (v) => _then(v as _$_CountryCode));
+class __$$CountryCodeImplCopyWithImpl<$Res>
+    extends _$CountryCodeCopyWithImpl<$Res, _$CountryCodeImpl>
+    implements _$$CountryCodeImplCopyWith<$Res> {
+  __$$CountryCodeImplCopyWithImpl(
+      _$CountryCodeImpl _value, $Res Function(_$CountryCodeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_CountryCode get _value => super._value as _$_CountryCode;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? code = freezed,
-    Object? iso = freezed,
+    Object? name = null,
+    Object? code = null,
+    Object? iso = null,
   }) {
-    return _then(_$_CountryCode(
-      name: name == freezed
+    return _then(_$CountryCodeImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String,
-      iso: iso == freezed
+      iso: null == iso
           ? _value.iso
           : iso // ignore: cast_nullable_to_non_nullable
               as String,
@@ -119,13 +123,13 @@ class __$$_CountryCodeCopyWithImpl<$Res> extends _$CountryCodeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CountryCode extends _CountryCode {
-  const _$_CountryCode(
+class _$CountryCodeImpl extends _CountryCode {
+  const _$CountryCodeImpl(
       {required this.name, required this.code, required this.iso})
       : super._();
 
-  factory _$_CountryCode.fromJson(Map<String, dynamic> json) =>
-      _$$_CountryCodeFromJson(json);
+  factory _$CountryCodeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CountryCodeImplFromJson(json);
 
   /// the name of the country
   @override
@@ -148,28 +152,25 @@ class _$_CountryCode extends _CountryCode {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CountryCode &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.code, code) &&
-            const DeepCollectionEquality().equals(other.iso, iso));
+            other is _$CountryCodeImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.iso, iso) || other.iso == iso));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(code),
-      const DeepCollectionEquality().hash(iso));
+  int get hashCode => Object.hash(runtimeType, name, code, iso);
 
   @JsonKey(ignore: true)
   @override
-  _$$_CountryCodeCopyWith<_$_CountryCode> get copyWith =>
-      __$$_CountryCodeCopyWithImpl<_$_CountryCode>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$CountryCodeImplCopyWith<_$CountryCodeImpl> get copyWith =>
+      __$$CountryCodeImplCopyWithImpl<_$CountryCodeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CountryCodeToJson(
+    return _$$CountryCodeImplToJson(
       this,
     );
   }
@@ -179,11 +180,11 @@ abstract class _CountryCode extends CountryCode {
   const factory _CountryCode(
       {required final String name,
       required final String code,
-      required final String iso}) = _$_CountryCode;
+      required final String iso}) = _$CountryCodeImpl;
   const _CountryCode._() : super._();
 
   factory _CountryCode.fromJson(Map<String, dynamic> json) =
-      _$_CountryCode.fromJson;
+      _$CountryCodeImpl.fromJson;
 
   @override
 
@@ -199,6 +200,6 @@ abstract class _CountryCode extends CountryCode {
   String get iso;
   @override
   @JsonKey(ignore: true)
-  _$$_CountryCodeCopyWith<_$_CountryCode> get copyWith =>
+  _$$CountryCodeImplCopyWith<_$CountryCodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
