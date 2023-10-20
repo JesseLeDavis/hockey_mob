@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/flavor.dart';
-import 'package:flutter_project_template_firebase/infrastructure/config/flavor_banner.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
-import 'package:flutter_project_template_firebase/routes/app_routes.dart';
 import 'package:flutter_project_template_firebase/routes/router.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 import 'package:flutter_project_template_firebase/shared/themes/text_themes.dart';
@@ -46,7 +43,7 @@ class _AppState extends State<_App> {
     return MaterialApp.router(
       theme: ThemeData(
         scaffoldBackgroundColor: ColorThemes.pureBlack,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           elevation: 0,
           backgroundColor: ColorThemes.neutral900,
         ),
@@ -77,6 +74,21 @@ class _AppState extends State<_App> {
 }
 
 extension ThemeX on BuildContext {
-  ThemeData get theme => Theme.of(this);
   MediaQueryData get mediaQuery => MediaQuery.of(this);
+  ThemeData get theme => Theme.of(this);
+  TextTheme get textTheme => theme.textTheme;
+  ColorScheme get colorScheme => theme.colorScheme;
+
+  TextStyle get largeTitle => textTheme.displayMedium!;
+  TextStyle get title1 => textTheme.headlineLarge!;
+  TextStyle get title2 => textTheme.headlineMedium!;
+  TextStyle get title3 => textTheme.headlineSmall!;
+  TextStyle get headline => textTheme.titleLarge!;
+  TextStyle get input => textTheme.titleMedium!;
+  TextStyle get body => textTheme.bodyLarge!;
+  TextStyle get callout => textTheme.bodyMedium!;
+  TextStyle get subhead => textTheme.bodySmall!;
+  TextStyle get footnote => textTheme.labelLarge!;
+  TextStyle get caption => textTheme.labelSmall!;
+  TextStyle get title => textTheme.titleSmall!;
 }

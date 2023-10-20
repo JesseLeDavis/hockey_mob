@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:bloc/bloc.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/app_environment.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/environment_config.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';

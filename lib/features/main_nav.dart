@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template_firebase/app/app.dart';
+import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
+import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 
 class MainNavPage extends StatelessWidget {
   const MainNavPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MainNavView();
+    return const MainNavView();
   }
 }
 
@@ -32,11 +35,33 @@ class _MainNavViewState extends State<MainNavView> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
-        backgroundColor: Colors.black,
+        backgroundColor: ColorThemes.neutral900,
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [],
+        unselectedItemColor: ColorThemes.neutral700,
+        selectedItemColor: ColorThemes.pureWhite,
+        selectedFontSize: 12,
+        items: [
+          BottomNavigationBarItem(
+            icon: Assets.icons.scoreboard.svg(color: ColorThemes.neutral700),
+            activeIcon: Assets.icons.scoreboard.svg(),
+            label: 'Games',
+          ),
+          BottomNavigationBarItem(
+            icon: Assets.icons.puck.svg(color: ColorThemes.neutral700),
+            activeIcon: Assets.icons.puck.svg(),
+            label: 'Teams',
+          ),
+          BottomNavigationBarItem(
+            icon: Assets.icons.star.svg(color: ColorThemes.neutral700),
+            activeIcon: Assets.icons.star.svg(),
+            label: 'Following',
+          ),
+          BottomNavigationBarItem(
+            icon: Assets.icons.hamburger.svg(color: ColorThemes.neutral700),
+            activeIcon: Assets.icons.hamburger.svg(),
+            label: 'Following',
+          ),
+        ],
       ),
     );
   }
