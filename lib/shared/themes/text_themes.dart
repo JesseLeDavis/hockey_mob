@@ -62,7 +62,7 @@ class _CTextTheme implements _ITextTheme {
     );
 
     final displayLarge = _base.copyWith(
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w700,
       fontSize: 40,
     );
 
@@ -92,7 +92,8 @@ class _CTextTheme implements _ITextTheme {
     );
 
     final body = _base.copyWith(
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
+      letterSpacing: .1,
       fontSize: 16,
     );
 

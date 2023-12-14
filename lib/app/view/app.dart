@@ -78,7 +78,7 @@ extension ThemeX on BuildContext {
   ThemeData get theme => Theme.of(this);
   TextTheme get textTheme => theme.textTheme;
   ColorScheme get colorScheme => theme.colorScheme;
-
+  TextStyle get displayLarge => textTheme.displayLarge!;
   TextStyle get largeTitle => textTheme.displayMedium!;
   TextStyle get title1 => textTheme.headlineLarge!;
   TextStyle get title2 => textTheme.headlineMedium!;
@@ -87,8 +87,9 @@ extension ThemeX on BuildContext {
   TextStyle get input => textTheme.titleMedium!;
   TextStyle get body => textTheme.bodyLarge!;
   TextStyle get callout => textTheme.bodyMedium!;
-  TextStyle get subhead => textTheme.bodySmall!;
-  TextStyle get footnote => textTheme.labelLarge!;
+  TextStyle get subhead => textTheme.labelLarge!;
+  TextStyle get subheadBold =>
+      textTheme.labelLarge!.copyWith(fontWeight: FontWeight.w700);
   TextStyle get caption => textTheme.labelSmall!;
   TextStyle get title => textTheme.titleSmall!;
 }

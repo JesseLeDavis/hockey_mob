@@ -27,7 +27,7 @@ abstract class ColorThemes {
   static const Color neutral800 = Color(0xFF262626);
   static const Color neutral900 = Color(0xFF171717);
   // ======= PRIMARY ========
-  static const Color primary = Color(0xFF3B82F6);
+  static const Color primary = Color(0xFF2454FF);
   // ======= UTILITY ========
   static const Color success = Color(0xFF00C165);
   static const Color alert = Color(0xFFDC2626);
