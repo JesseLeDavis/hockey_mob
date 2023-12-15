@@ -16,37 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TeamsPageState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  List<Team> get teamsList => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $TeamsPageStateCopyWith<TeamsPageState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -55,6 +28,8 @@ abstract class $TeamsPageStateCopyWith<$Res> {
   factory $TeamsPageStateCopyWith(
           TeamsPageState value, $Res Function(TeamsPageState) then) =
       _$TeamsPageStateCopyWithImpl<$Res, TeamsPageState>;
+  @useResult
+  $Res call({List<Team> teamsList});
 }
 
 /// @nodoc
@@ -66,100 +41,101 @@ class _$TeamsPageStateCopyWithImpl<$Res, $Val extends TeamsPageState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? teamsList = null,
+  }) {
+    return _then(_value.copyWith(
+      teamsList: null == teamsList
+          ? _value.teamsList
+          : teamsList // ignore: cast_nullable_to_non_nullable
+              as List<Team>,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$TeamPageStateImplCopyWith<$Res>
+    implements $TeamsPageStateCopyWith<$Res> {
+  factory _$$TeamPageStateImplCopyWith(
+          _$TeamPageStateImpl value, $Res Function(_$TeamPageStateImpl) then) =
+      __$$TeamPageStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<Team> teamsList});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$TeamsPageStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$TeamPageStateImplCopyWithImpl<$Res>
+    extends _$TeamsPageStateCopyWithImpl<$Res, _$TeamPageStateImpl>
+    implements _$$TeamPageStateImplCopyWith<$Res> {
+  __$$TeamPageStateImplCopyWithImpl(
+      _$TeamPageStateImpl _value, $Res Function(_$TeamPageStateImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? teamsList = null,
+  }) {
+    return _then(_$TeamPageStateImpl(
+      teamsList: null == teamsList
+          ? _value._teamsList
+          : teamsList // ignore: cast_nullable_to_non_nullable
+              as List<Team>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$TeamPageStateImpl implements _TeamPageState {
+  const _$TeamPageStateImpl({required final List<Team> teamsList})
+      : _teamsList = teamsList;
+
+  final List<Team> _teamsList;
+  @override
+  List<Team> get teamsList {
+    if (_teamsList is EqualUnmodifiableListView) return _teamsList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_teamsList);
+  }
 
   @override
   String toString() {
-    return 'TeamsPageState.initial()';
+    return 'TeamsPageState(teamsList: $teamsList)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$TeamPageStateImpl &&
+            const DeepCollectionEquality()
+                .equals(other._teamsList, _teamsList));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_teamsList));
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  @pragma('vm:prefer-inline')
+  _$$TeamPageStateImplCopyWith<_$TeamPageStateImpl> get copyWith =>
+      __$$TeamPageStateImplCopyWithImpl<_$TeamPageStateImpl>(this, _$identity);
 }
 
-abstract class _Initial implements TeamsPageState {
-  const factory _Initial() = _$InitialImpl;
+abstract class _TeamPageState implements TeamsPageState {
+  const factory _TeamPageState({required final List<Team> teamsList}) =
+      _$TeamPageStateImpl;
+
+  @override
+  List<Team> get teamsList;
+  @override
+  @JsonKey(ignore: true)
+  _$$TeamPageStateImplCopyWith<_$TeamPageStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

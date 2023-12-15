@@ -8,8 +8,10 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection_module.dart'
+import 'package:flutter_project_template_firebase/features/teams_page/cubit/teams_page_cubit.dart'
     as _i7;
+import 'package:flutter_project_template_firebase/infrastructure/injection/injection_module.dart'
+    as _i8;
 import 'package:flutter_project_template_firebase/infrastructure/secure_local_storage/lsecure_local_storage.dart'
     as _i5;
 import 'package:flutter_project_template_firebase/routes/router.dart' as _i3;
@@ -35,8 +37,9 @@ extension GetItInjectableX on _i1.GetIt {
         () => injectionModule.localAuthentication);
     gh.singleton<_i5.SecureLocalStorage>(_i5.SecureLocalStorage());
     gh.factoryAsync<_i6.SharedPreferences>(() => injectionModule.prefs);
+    gh.factory<_i7.TeamsPageCubit>(() => _i7.TeamsPageCubit());
     return this;
   }
 }
 
-class _$InjectionModule extends _i7.InjectionModule {}
+class _$InjectionModule extends _i8.InjectionModule {}

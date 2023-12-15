@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_firebase/app/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
+import 'package:flutter_project_template_firebase/features/teams_page/cubit/teams_page_cubit.dart';
+import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TeamsPage extends StatelessWidget {
   const TeamsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const TeamsView();
+    return BlocProvider(
+      create: (context) => getIt<TeamsPageCubit>(),
+      child: const TeamsView(),
+    );
   }
 }
 
@@ -25,37 +31,55 @@ class TeamsView extends StatefulWidget {
 class _TeamsViewState extends State<TeamsView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            gapW4,
-            Text(
-              'Teams',
-              style: context.displayLarge,
+    return BlocBuilder<TeamsPageCubit, TeamsPageState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+            toolbarHeight: 90,
+            title: Row(
+              children: [
+                gapW4,
+                Text(
+                  'Teams',
+                  style: context.displayLarge,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            width: double.infinity,
-            color: ColorThemes.neutral900,
-            child: const MenuRow(index: 0),
           ),
-          const Column(
+          body: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Padding(
-                padding: EdgeInsets.all(16),
-                child: TeamContainer(),
+              Expanded(
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: state.teamsList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final team = state.teamsList[index];
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (index == 0) gapH12,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: TeamContainer(
+                            teamName: team.teamName,
+                            teamLogo: team.largeLogo,
+                          ),
+                        ),
+                        if (index == state.teamsList.length - 1) gapH12,
+                      ],
+                    );
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return gapH12;
+                  },
+                ),
               ),
             ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
@@ -63,7 +87,12 @@ class _TeamsViewState extends State<TeamsView> {
 class TeamContainer extends StatefulWidget {
   const TeamContainer({
     super.key,
+    required this.teamName,
+    required this.teamLogo,
   });
+
+  final String teamName;
+  final SvgPicture teamLogo;
 
   @override
   State<TeamContainer> createState() => _TeamContainerState();
@@ -84,10 +113,10 @@ class _TeamContainerState extends State<TeamContainer> {
         width: double.infinity,
         child: Row(
           children: [
-            Assets.icons.anaheimDucksSmall.svg(),
+            widget.teamLogo,
             gapW8,
             Text(
-              'Anaheim Ducks',
+              widget.teamName,
               style: context.body,
             ),
             const Spacer(),
