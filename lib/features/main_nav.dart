@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/features/top_pag_swapper.dart';
+import 'package:flutter_project_template_firebase/features/teams_page/teams_page.dart';
 import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 
@@ -25,7 +25,7 @@ class _MainNavViewState extends State<MainNavView> {
   int _currentIndex = 0;
   final screens = [
     const SizedBox(),
-    const MyWidget(),
+    const TeamsPage(),
     const SizedBox(),
     const SizedBox(),
   ];

@@ -4,15 +4,25 @@ import 'package:flutter_project_template_firebase/constants/gaps.dart';
 import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class TeamsPage extends StatelessWidget {
+  const TeamsPage({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  Widget build(BuildContext context) {
+    return const TeamsView();
+  }
 }
 
-class _MyWidgetState extends State<MyWidget> {
-  int index = 0;
+class TeamsView extends StatefulWidget {
+  const TeamsView({
+    super.key,
+  });
+
+  @override
+  State<TeamsView> createState() => _TeamsViewState();
+}
+
+class _TeamsViewState extends State<TeamsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,39 +44,66 @@ class _MyWidgetState extends State<MyWidget> {
           Container(
             width: double.infinity,
             color: ColorThemes.neutral900,
-            child: MenuRow(index: index),
+            child: const MenuRow(index: 0),
           ),
-          Column(
+          const Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(16),
-                child: Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: ColorThemes.neutral800,
-                  ),
-                  width: double.infinity,
-                  child: Row(
-                    children: [
-                      Assets.icons.anaheimDucksSmall.svg(),
-                      gapW8,
-                      Text(
-                        'Anaheim Ducks',
-                        style: context.body,
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.star_rounded,
-                        color: ColorThemes.neutral600,
-                      ),
-                    ],
-                  ),
-                ),
+                padding: EdgeInsets.all(16),
+                child: TeamContainer(),
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class TeamContainer extends StatefulWidget {
+  const TeamContainer({
+    super.key,
+  });
+
+  @override
+  State<TeamContainer> createState() => _TeamContainerState();
+}
+
+class _TeamContainerState extends State<TeamContainer> {
+  bool isSelectred = false;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => setState(() {}),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: ColorThemes.neutral800,
+        ),
+        width: double.infinity,
+        child: Row(
+          children: [
+            Assets.icons.anaheimDucksSmall.svg(),
+            gapW8,
+            Text(
+              'Anaheim Ducks',
+              style: context.body,
+            ),
+            const Spacer(),
+            GestureDetector(
+              onTap: () => setState(() {
+                isSelectred = !isSelectred;
+              }),
+              child: Icon(
+                Icons.star_rounded,
+                color: isSelectred
+                    ? ColorThemes.neutral300
+                    : ColorThemes.neutral600,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
