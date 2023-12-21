@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template_firebase/routes/app_routes.dart';
+import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 
@@ -16,7 +17,7 @@ class AppRouter {
     routes: appRoutes(),
     debugLogDiagnostics: kDebugMode,
     navigatorKey: rootNavigatorKey,
-    initialLocation: '/',
+    initialLocation: Paths.teams.path,
     errorBuilder: (context, state) => const Center(
       child: Text('error'),
     ),

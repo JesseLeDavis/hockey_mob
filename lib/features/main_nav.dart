@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/features/teams_page/teams_page.dart';
 import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
+import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:go_router/go_router.dart';
 
 class MainNavPage extends StatelessWidget {
-  const MainNavPage({super.key});
+  const MainNavPage({
+    super.key,
+    required this.widget,
+  });
+
+  final Widget widget;
 
   @override
   Widget build(BuildContext context) {
-    return const MainNavView();
+    return MainNavView(
+      child: widget,
+    );
   }
 }
 
 class MainNavView extends StatefulWidget {
   const MainNavView({
     super.key,
+    required this.child,
   });
+  final Widget child;
 
   @override
   State<MainNavView> createState() => _MainNavViewState();
@@ -23,19 +33,32 @@ class MainNavView extends StatefulWidget {
 
 class _MainNavViewState extends State<MainNavView> {
   int _currentIndex = 0;
-  final screens = [
-    const SizedBox(),
-    const TeamsPage(),
-    const SizedBox(),
-    const SizedBox(),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[_currentIndex],
+      body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: (index) => setState(() => _currentIndex = index),
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          switch (index) {
+            case 0:
+              context.goNamed(Paths.teams.name);
+              break;
+            case 1:
+              context.goNamed(Paths.teams.name);
+              break;
+            case 2:
+              context.goNamed(Paths.teams.name);
+              break;
+            case 3:
+              context.goNamed(Paths.teams.name);
+              break;
+          }
+        },
         backgroundColor: ColorThemes.neutral900,
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: ColorThemes.neutral700,

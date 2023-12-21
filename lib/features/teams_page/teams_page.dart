@@ -4,8 +4,10 @@ import 'package:flutter_project_template_firebase/app/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
 import 'package:flutter_project_template_firebase/features/teams_page/cubit/teams_page_cubit.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
+import 'package:flutter_project_template_firebase/models/team_model.dart';
+import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class TeamsPage extends StatelessWidget {
   const TeamsPage({super.key});
@@ -63,8 +65,7 @@ class _TeamsViewState extends State<TeamsView> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: TeamContainer(
-                            teamName: team.teamName,
-                            teamLogo: team.largeLogo,
+                            team: team,
                           ),
                         ),
                         if (index == state.teamsList.length - 1) gapH12,
@@ -87,12 +88,9 @@ class _TeamsViewState extends State<TeamsView> {
 class TeamContainer extends StatefulWidget {
   const TeamContainer({
     super.key,
-    required this.teamName,
-    required this.teamLogo,
+    required this.team,
   });
-
-  final String teamName;
-  final SvgPicture teamLogo;
+  final Team team;
 
   @override
   State<TeamContainer> createState() => _TeamContainerState();
@@ -100,10 +98,18 @@ class TeamContainer extends StatefulWidget {
 
 class _TeamContainerState extends State<TeamContainer> {
   bool isSelectred = false;
+
   @override
   Widget build(BuildContext context) {
+    final team = widget.team;
+
     return GestureDetector(
-      onTap: () => setState(() {}),
+      onTap: () => context.pushNamed(
+        Paths.team.name,
+        pathParameters: {
+          'id': team.id,
+        },
+      ),
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
@@ -113,10 +119,10 @@ class _TeamContainerState extends State<TeamContainer> {
         width: double.infinity,
         child: Row(
           children: [
-            widget.teamLogo,
+            team.largeLogo,
             gapW8,
             Text(
-              widget.teamName,
+              team.teamName,
               style: context.body,
             ),
             const Spacer(),

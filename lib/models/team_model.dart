@@ -4,12 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class Team extends Equatable {
   const Team({
+    required this.id,
     required this.teamName,
     required this.largeLogo,
     required this.smallLogol,
     required this.primaryColor,
     required this.secondaryColor,
   });
+  final String id;
   final String teamName;
   final SvgPicture largeLogo;
   final SvgPicture smallLogol;
