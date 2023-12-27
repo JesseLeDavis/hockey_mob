@@ -206,7 +206,7 @@ class _$MobileSizeLandscapeImpl implements _MobileSizeLandscape {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MobileSizeLandscapeImpl &&
@@ -405,7 +405,7 @@ class _$MobileSizePortraitImpl implements _MobileSizePortrait {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MobileSizePortraitImpl &&
@@ -693,7 +693,7 @@ class _$TabletSizeLandscapeImpl implements _TabletSizeLandscape {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TabletSizeLandscapeImpl &&
@@ -870,7 +870,7 @@ class _$TabletSizePortraitImpl implements _TabletSizePortrait {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TabletSizePortraitImpl &&
@@ -1079,7 +1079,7 @@ class _$WatchSizeLandscapeImpl implements _WatchSizeLandscape {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WatchSizeLandscapeImpl &&
