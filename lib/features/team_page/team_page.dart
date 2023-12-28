@@ -1,10 +1,12 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template_firebase/app/view/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
 import 'package:flutter_project_template_firebase/constants/teams_list.dart';
+import 'package:flutter_project_template_firebase/features/team_page/componets/menu_row.dart';
 import 'package:flutter_project_template_firebase/features/team_page/cubit/team_page_cubit.dart';
+import 'package:flutter_project_template_firebase/features/team_page/lines_view/lines_view.dart';
+import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 import 'package:go_router/go_router.dart';
@@ -48,10 +50,8 @@ class TeamView extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () => context.pop(),
-                      child: Container(
-                        height: 30,
-                        width: 30,
-                        color: ColorThemes.primary,
+                      child: const Icon(
+                        Icons.arrow_back,
                       ),
                     ),
                     gapW4,
@@ -63,153 +63,10 @@ class TeamView extends StatelessWidget {
                 ),
               ),
               body: Column(
-                children: [MenuRow(index: loaded.menuIndex)],
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
-}
-
-class MenuRow extends StatelessWidget {
-  const MenuRow({
-    super.key,
-    required this.index,
-  });
-
-  final int index;
-
-  @override
-  Widget build(BuildContext context) {
-    const horizontalPadding = 12.0;
-
-    return BlocBuilder<TeamPageCubit, TeamPageState>(
-      builder: (context, state) {
-        return state.maybeMap(
-          orElse: CircularProgressIndicator.new,
-          loaded: (loaded) {
-            final cubit = context.read<TeamPageCubit>();
-            return Container(
-              color: ColorThemes.neutral900,
-              child: Row(
                 children: [
-                  gapW24,
-                  GestureDetector(
-                    onTap: () {
-                      cubit.updateMenuIndex(0);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10,
-                        right: horizontalPadding,
-                      ),
-                      child: Container(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              color: index == 0
-                                  ? ColorThemes.primary
-                                  : Colors.transparent,
-                              width: 2.5,
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'Lines',
-                          style: context.subheadBold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      cubit.updateMenuIndex(1);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10,
-                        left: horizontalPadding,
-                        right: horizontalPadding,
-                      ),
-                      child: Container(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              color: index == 1
-                                  ? ColorThemes.primary
-                                  : Colors.transparent,
-                              width: 2.5,
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'Schedule',
-                          style: context.subheadBold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      cubit.updateMenuIndex(2);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10,
-                        left: horizontalPadding,
-                        right: horizontalPadding,
-                      ),
-                      child: Container(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              color: index == 2
-                                  ? ColorThemes.primary
-                                  : Colors.transparent,
-                              width: 2.5,
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'Stats',
-                          style: context.subheadBold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      cubit.updateMenuIndex(3);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10,
-                        left: horizontalPadding,
-                        right: horizontalPadding,
-                      ),
-                      child: Container(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        decoration: BoxDecoration(
-                          border: Border(
-                            bottom: BorderSide(
-                              color: index == 3
-                                  ? ColorThemes.primary
-                                  : Colors.transparent,
-                              width: 2.5,
-                            ),
-                          ),
-                        ),
-                        child: Text(
-                          'News',
-                          style: context.subheadBold,
-                        ),
-                      ),
-                    ),
+                  MenuRow(index: loaded.menuIndex),
+                  Expanded(
+                    child: _getCurrentStepPage(currentStep: loaded.menuIndex),
                   ),
                 ],
               ),
@@ -218,5 +75,29 @@ class MenuRow extends StatelessWidget {
         );
       },
     );
+  }
+
+  Widget _getCurrentStepPage({required int currentStep}) {
+    switch (currentStep) {
+      case 0:
+        return const LinesView();
+      case 1:
+        return Container(
+          height: 30,
+          width: 30,
+          color: ColorThemes.neutral500,
+        );
+      case 2:
+        return Container(
+          height: 30,
+          width: 30,
+          color: ColorThemes.neutral900,
+        );
+      default:
+        return const Center(
+          key: ValueKey<int>(-1),
+          child: CircularProgressIndicator(),
+        );
+    }
   }
 }

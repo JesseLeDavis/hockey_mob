@@ -20,7 +20,8 @@ mixin _$TeamPageState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() error,
-    required TResult Function(int menuIndex, TeamPageContent teamPageContent)
+    required TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)
         loaded,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,14 +29,18 @@ mixin _$TeamPageState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? error,
-    TResult? Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult? Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? error,
-    TResult Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,7 +126,8 @@ class _$InitialImpl extends _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() error,
-    required TResult Function(int menuIndex, TeamPageContent teamPageContent)
+    required TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)
         loaded,
   }) {
     return initial();
@@ -132,7 +138,9 @@ class _$InitialImpl extends _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? error,
-    TResult? Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult? Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
   }) {
     return initial?.call();
   }
@@ -142,7 +150,9 @@ class _$InitialImpl extends _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? error,
-    TResult Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -231,7 +241,8 @@ class _$ErrorImpl extends _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() error,
-    required TResult Function(int menuIndex, TeamPageContent teamPageContent)
+    required TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)
         loaded,
   }) {
     return error();
@@ -242,7 +253,9 @@ class _$ErrorImpl extends _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? error,
-    TResult? Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult? Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
   }) {
     return error?.call();
   }
@@ -252,7 +265,9 @@ class _$ErrorImpl extends _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? error,
-    TResult Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -307,7 +322,13 @@ abstract class _$$LoadedImplCopyWith<$Res> {
           _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int menuIndex, TeamPageContent teamPageContent});
+  $Res call(
+      {int currentStep,
+      int totalSteps,
+      int previousStep,
+      int menuIndex,
+      bool isLeft,
+      TeamPageContent teamPageContent});
 }
 
 /// @nodoc
@@ -321,14 +342,34 @@ class __$$LoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? currentStep = null,
+    Object? totalSteps = null,
+    Object? previousStep = null,
     Object? menuIndex = null,
+    Object? isLeft = null,
     Object? teamPageContent = null,
   }) {
     return _then(_$LoadedImpl(
+      currentStep: null == currentStep
+          ? _value.currentStep
+          : currentStep // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalSteps: null == totalSteps
+          ? _value.totalSteps
+          : totalSteps // ignore: cast_nullable_to_non_nullable
+              as int,
+      previousStep: null == previousStep
+          ? _value.previousStep
+          : previousStep // ignore: cast_nullable_to_non_nullable
+              as int,
       menuIndex: null == menuIndex
           ? _value.menuIndex
           : menuIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      isLeft: null == isLeft
+          ? _value.isLeft
+          : isLeft // ignore: cast_nullable_to_non_nullable
+              as bool,
       teamPageContent: null == teamPageContent
           ? _value.teamPageContent
           : teamPageContent // ignore: cast_nullable_to_non_nullable
@@ -341,19 +382,36 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 class _$LoadedImpl extends _Loaded {
   const _$LoadedImpl(
-      {this.menuIndex = 0, this.teamPageContent = TeamPageContent.lines})
+      {this.currentStep = 0,
+      this.totalSteps = 3,
+      this.previousStep = 0,
+      this.menuIndex = 0,
+      this.isLeft = false,
+      this.teamPageContent = TeamPageContent.lines})
       : super._();
 
   @override
   @JsonKey()
+  final int currentStep;
+  @override
+  @JsonKey()
+  final int totalSteps;
+  @override
+  @JsonKey()
+  final int previousStep;
+  @override
+  @JsonKey()
   final int menuIndex;
+  @override
+  @JsonKey()
+  final bool isLeft;
   @override
   @JsonKey()
   final TeamPageContent teamPageContent;
 
   @override
   String toString() {
-    return 'TeamPageState.loaded(menuIndex: $menuIndex, teamPageContent: $teamPageContent)';
+    return 'TeamPageState.loaded(currentStep: $currentStep, totalSteps: $totalSteps, previousStep: $previousStep, menuIndex: $menuIndex, isLeft: $isLeft, teamPageContent: $teamPageContent)';
   }
 
   @override
@@ -361,14 +419,22 @@ class _$LoadedImpl extends _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
+            (identical(other.currentStep, currentStep) ||
+                other.currentStep == currentStep) &&
+            (identical(other.totalSteps, totalSteps) ||
+                other.totalSteps == totalSteps) &&
+            (identical(other.previousStep, previousStep) ||
+                other.previousStep == previousStep) &&
             (identical(other.menuIndex, menuIndex) ||
                 other.menuIndex == menuIndex) &&
+            (identical(other.isLeft, isLeft) || other.isLeft == isLeft) &&
             (identical(other.teamPageContent, teamPageContent) ||
                 other.teamPageContent == teamPageContent));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, menuIndex, teamPageContent);
+  int get hashCode => Object.hash(runtimeType, currentStep, totalSteps,
+      previousStep, menuIndex, isLeft, teamPageContent);
 
   @JsonKey(ignore: true)
   @override
@@ -381,10 +447,12 @@ class _$LoadedImpl extends _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() error,
-    required TResult Function(int menuIndex, TeamPageContent teamPageContent)
+    required TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)
         loaded,
   }) {
-    return loaded(menuIndex, teamPageContent);
+    return loaded(currentStep, totalSteps, previousStep, menuIndex, isLeft,
+        teamPageContent);
   }
 
   @override
@@ -392,9 +460,12 @@ class _$LoadedImpl extends _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? error,
-    TResult? Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult? Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
   }) {
-    return loaded?.call(menuIndex, teamPageContent);
+    return loaded?.call(currentStep, totalSteps, previousStep, menuIndex,
+        isLeft, teamPageContent);
   }
 
   @override
@@ -402,11 +473,14 @@ class _$LoadedImpl extends _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? error,
-    TResult Function(int menuIndex, TeamPageContent teamPageContent)? loaded,
+    TResult Function(int currentStep, int totalSteps, int previousStep,
+            int menuIndex, bool isLeft, TeamPageContent teamPageContent)?
+        loaded,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(menuIndex, teamPageContent);
+      return loaded(currentStep, totalSteps, previousStep, menuIndex, isLeft,
+          teamPageContent);
     }
     return orElse();
   }
@@ -448,11 +522,19 @@ class _$LoadedImpl extends _Loaded {
 
 abstract class _Loaded extends TeamPageState {
   const factory _Loaded(
-      {final int menuIndex,
+      {final int currentStep,
+      final int totalSteps,
+      final int previousStep,
+      final int menuIndex,
+      final bool isLeft,
       final TeamPageContent teamPageContent}) = _$LoadedImpl;
   const _Loaded._() : super._();
 
+  int get currentStep;
+  int get totalSteps;
+  int get previousStep;
   int get menuIndex;
+  bool get isLeft;
   TeamPageContent get teamPageContent;
   @JsonKey(ignore: true)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>

@@ -81,7 +81,11 @@ extension ThemeX on BuildContext {
   TextStyle get displayLarge => textTheme.displayLarge!;
   TextStyle get largeTitle => textTheme.displayMedium!;
   TextStyle get title1 => textTheme.headlineLarge!;
+  TextStyle get title1Bold =>
+      textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w800);
   TextStyle get title2 => textTheme.headlineMedium!;
+  TextStyle get title2Bold =>
+      textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w800);
   TextStyle get title3 => textTheme.headlineSmall!;
   TextStyle get headline => textTheme.titleLarge!;
   TextStyle get input => textTheme.titleMedium!;

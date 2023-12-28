@@ -57,7 +57,7 @@ flutter_gen:
   output: lib/gen/
   integrations:
     flutter_svg: true
-  line_length: 80
+  line_length: 90
   
 flutter: 
   uses-material-design: true
