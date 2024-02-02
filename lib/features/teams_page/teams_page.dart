@@ -43,7 +43,7 @@ class _TeamsViewState extends State<TeamsView> {
                 gapW4,
                 Text(
                   'Teams',
-                  style: context.displayLarge,
+                  style: context.largeTitle,
                 ),
               ],
             ),

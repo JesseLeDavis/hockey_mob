@@ -9,6 +9,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/app_environment.dart';
 import 'package:flutter_project_template_firebase/infrastructure/config/environment_config.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
+import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
 
 import 'package:logger/logger.dart';
 
@@ -47,6 +48,9 @@ Future<void> bootstrap({
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );
+
+  // intialized data store
+  await getIt<HiveDataStore>().init();
 
   await runZonedGuarded(
     () async {

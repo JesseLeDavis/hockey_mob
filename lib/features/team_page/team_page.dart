@@ -57,7 +57,7 @@ class TeamView extends StatelessWidget {
                     gapW4,
                     Text(
                       team.teamName,
-                      style: context.displayLarge,
+                      style: context.largeTitle,
                     ),
                   ],
                 ),
@@ -99,5 +99,20 @@ class TeamView extends StatelessWidget {
           child: CircularProgressIndicator(),
         );
     }
+  }
+}
+
+class name extends StatefulWidget {
+  const name({super.key});
+
+  @override
+  State<name> createState() => _nameState();
+}
+
+class _nameState extends State<name> {
+  int i = 5;
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

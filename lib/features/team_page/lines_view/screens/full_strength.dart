@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template_firebase/app/view/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
+import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 
 class FullStrength extends StatelessWidget {
@@ -10,26 +11,25 @@ class FullStrength extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          gapH16,
-          Row(
-            children: [
-              Text(
-                'Full Strength',
-                style: context.title1Bold,
-              ),
-            ],
-          ),
-          gapH24,
-          const Offence(),
-          gapH24,
-          const Defence(),
-          gapH16,
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            gapH16,
+            Text(
+              'Full Strength',
+              style: context.title1Bold,
+            ),
+            gapH24,
+            const Offence(),
+            gapH24,
+            const Defence(),
+            gapH16,
+          ],
+        ),
       ),
     );
   }
@@ -79,7 +79,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -101,7 +101,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -123,7 +123,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -161,7 +161,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -183,7 +183,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -205,7 +205,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -243,7 +243,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -265,7 +265,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -287,7 +287,7 @@ class Defence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -310,7 +310,6 @@ class Offence extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
@@ -346,7 +345,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -368,7 +367,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -390,7 +389,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -428,7 +427,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -450,7 +449,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -472,7 +471,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -510,7 +509,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -532,7 +531,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -554,7 +553,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -592,7 +591,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -614,7 +613,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),
@@ -636,7 +635,7 @@ class Offence extends StatelessWidget {
                       gapH8,
                       Text(
                         'Player',
-                        style: context.callout,
+                        style: context.body,
                       ),
                     ],
                   ),

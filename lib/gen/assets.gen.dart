@@ -15,8 +15,7 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/Scoreboard.svg
-  SvgGenImage get scoreboard =>
-      const SvgGenImage('assets/icons/Scoreboard.svg');
+  SvgGenImage get scoreboard => const SvgGenImage('assets/icons/Scoreboard.svg');
 
   /// File path: assets/icons/anaheim_ducks_large.svg
   SvgGenImage get anaheimDucksLarge =>
@@ -30,9 +29,17 @@ class $AssetsIconsGen {
   SvgGenImage get arizonaCoyotesLarge =>
       const SvgGenImage('assets/icons/arizona_coyotes_large.svg');
 
+  /// File path: assets/icons/arizona_coyotes_small.svg
+  SvgGenImage get arizonaCoyotesSmall =>
+      const SvgGenImage('assets/icons/arizona_coyotes_small.svg');
+
   /// File path: assets/icons/boston_bruins_large.svg
   SvgGenImage get bostonBruinsLarge =>
       const SvgGenImage('assets/icons/boston_bruins_large.svg');
+
+  /// File path: assets/icons/boston_bruins_small.svg
+  SvgGenImage get bostonBruinsSmall =>
+      const SvgGenImage('assets/icons/boston_bruins_small.svg');
 
   /// File path: assets/icons/buffalo_sabres_large.svg
   SvgGenImage get buffaloSabresLarge =>
@@ -56,6 +63,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/carolina_hurricanes_large.svg
   SvgGenImage get carolinaHurricanesLarge =>
       const SvgGenImage('assets/icons/carolina_hurricanes_large.svg');
+
+  /// File path: assets/icons/carolina_hurricanes_small.svg
+  SvgGenImage get carolinaHurricanesSmall =>
+      const SvgGenImage('assets/icons/carolina_hurricanes_small.svg');
 
   /// File path: assets/icons/check.svg
   SvgGenImage get check => const SvgGenImage('assets/icons/check.svg');
@@ -96,9 +107,23 @@ class $AssetsIconsGen {
   SvgGenImage get detroitRedWingsLarge =>
       const SvgGenImage('assets/icons/detroit_red_wings_large.svg');
 
+  /// File path: assets/icons/detroit_red_wings_small.svg
+  SvgGenImage get detroitRedWingsSmall =>
+      const SvgGenImage('assets/icons/detroit_red_wings_small.svg');
+
+  /// File path: assets/icons/down_large.svg
+  SvgGenImage get downLarge => const SvgGenImage('assets/icons/down_large.svg');
+
+  /// File path: assets/icons/down_small.svg
+  SvgGenImage get downSmall => const SvgGenImage('assets/icons/down_small.svg');
+
   /// File path: assets/icons/edmonton_oilers_large.svg
   SvgGenImage get edmontonOilersLarge =>
       const SvgGenImage('assets/icons/edmonton_oilers_large.svg');
+
+  /// File path: assets/icons/edmonton_oilers_small.svg
+  SvgGenImage get edmontonOilersSmall =>
+      const SvgGenImage('assets/icons/edmonton_oilers_small.svg');
 
   /// File path: assets/icons/ellipse.svg
   SvgGenImage get ellipse => const SvgGenImage('assets/icons/ellipse.svg');
@@ -106,6 +131,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/florida_panthers_large.svg
   SvgGenImage get floridaPanthersLarge =>
       const SvgGenImage('assets/icons/florida_panthers_large.svg');
+
+  /// File path: assets/icons/florida_panthers_small.svg
+  SvgGenImage get floridaPanthersSmall =>
+      const SvgGenImage('assets/icons/florida_panthers_small.svg');
 
   /// File path: assets/icons/goal.svg
   SvgGenImage get goal => const SvgGenImage('assets/icons/goal.svg');
@@ -117,14 +146,23 @@ class $AssetsIconsGen {
   SvgGenImage get heart => const SvgGenImage('assets/icons/heart.svg');
 
   /// File path: assets/icons/hockey_sticks.svg
-  SvgGenImage get hockeySticks =>
-      const SvgGenImage('assets/icons/hockey_sticks.svg');
+  SvgGenImage get hockeySticks => const SvgGenImage('assets/icons/hockey_sticks.svg');
 
   /// File path: assets/icons/home.svg
   SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
 
   /// File path: assets/icons/ice_rink.svg
   SvgGenImage get iceRink => const SvgGenImage('assets/icons/ice_rink.svg');
+
+  /// File path: assets/icons/left_large.svg
+  SvgGenImage get leftLarge => const SvgGenImage('assets/icons/left_large.svg');
+
+  /// File path: assets/icons/left_small.svg
+  SvgGenImage get leftSmall => const SvgGenImage('assets/icons/left_small.svg');
+
+  /// File path: assets/icons/los_angeles_kings_large.svg
+  SvgGenImage get losAngelesKingsLarge =>
+      const SvgGenImage('assets/icons/los_angeles_kings_large.svg');
 
   /// File path: assets/icons/los_angeles_kings_small.svg
   SvgGenImage get losAngelesKingsSmall =>
@@ -137,6 +175,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/minnesota_wild_large.svg
   SvgGenImage get minnesotaWildLarge =>
       const SvgGenImage('assets/icons/minnesota_wild_large.svg');
+
+  /// File path: assets/icons/minnesota_wild_small.svg
+  SvgGenImage get minnesotaWildSmall =>
+      const SvgGenImage('assets/icons/minnesota_wild_small.svg');
 
   /// File path: assets/icons/montreal_canadiens.svg
   SvgGenImage get montrealCanadiens =>
@@ -211,13 +253,19 @@ class $AssetsIconsGen {
   /// File path: assets/icons/puck.svg
   SvgGenImage get puck => const SvgGenImage('assets/icons/puck.svg');
 
-  /// File path: assets/icons/san_jose_sharks.svg
-  SvgGenImage get sanJoseSharks =>
-      const SvgGenImage('assets/icons/san_jose_sharks.svg');
+  /// File path: assets/icons/right_large.svg
+  SvgGenImage get rightLarge => const SvgGenImage('assets/icons/right_large.svg');
+
+  /// File path: assets/icons/right_small.svg
+  SvgGenImage get rightSmall => const SvgGenImage('assets/icons/right_small.svg');
 
   /// File path: assets/icons/san_jose_sharks_large.svg
   SvgGenImage get sanJoseSharksLarge =>
       const SvgGenImage('assets/icons/san_jose_sharks_large.svg');
+
+  /// File path: assets/icons/san_jose_sharks_small.svg
+  SvgGenImage get sanJoseSharksSmall =>
+      const SvgGenImage('assets/icons/san_jose_sharks_small.svg');
 
   /// File path: assets/icons/search.svg
   SvgGenImage get search => const SvgGenImage('assets/icons/search.svg');
@@ -260,6 +308,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/trash.svg
   SvgGenImage get trash => const SvgGenImage('assets/icons/trash.svg');
 
+  /// File path: assets/icons/up_large.svg
+  SvgGenImage get upLarge => const SvgGenImage('assets/icons/up_large.svg');
+
+  /// File path: assets/icons/up_small.svg
+  SvgGenImage get upSmall => const SvgGenImage('assets/icons/up_small.svg');
+
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
@@ -301,13 +355,16 @@ class $AssetsIconsGen {
         anaheimDucksLarge,
         anaheimDucksSmall,
         arizonaCoyotesLarge,
+        arizonaCoyotesSmall,
         bostonBruinsLarge,
+        bostonBruinsSmall,
         buffaloSabresLarge,
         buffaloSabresSmall,
         calendar,
         calgaryFlamesLarge,
         calgaryFlamesSmall,
         carolinaHurricanesLarge,
+        carolinaHurricanesSmall,
         check,
         chicagoBlackhawksLarge,
         chicagoBlackhawksSmall,
@@ -318,18 +375,27 @@ class $AssetsIconsGen {
         dallasStarsLarge,
         dallasStarsSmall,
         detroitRedWingsLarge,
+        detroitRedWingsSmall,
+        downLarge,
+        downSmall,
         edmontonOilersLarge,
+        edmontonOilersSmall,
         ellipse,
         floridaPanthersLarge,
+        floridaPanthersSmall,
         goal,
         hamburger,
         heart,
         hockeySticks,
         home,
         iceRink,
+        leftLarge,
+        leftSmall,
+        losAngelesKingsLarge,
         losAngelesKingsSmall,
         losAngelesLarge,
         minnesotaWildLarge,
+        minnesotaWildSmall,
         montrealCanadiens,
         montrealCanadiensSmall,
         nashvillePredatorsLarge,
@@ -349,8 +415,10 @@ class $AssetsIconsGen {
         pittsburghPenguinsSmall,
         plus,
         puck,
-        sanJoseSharks,
+        rightLarge,
+        rightSmall,
         sanJoseSharksLarge,
+        sanJoseSharksSmall,
         search,
         seattleKrakenLarge,
         seattleKrakenSmall,
@@ -362,6 +430,8 @@ class $AssetsIconsGen {
         torontoMapleLeafsLarge,
         torontoMapleLeafsSmall,
         trash,
+        upLarge,
+        upSmall,
         user,
         vancouverCanucksLarge,
         vancouverCanucksSmall,

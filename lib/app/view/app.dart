@@ -65,7 +65,7 @@ class _AppState extends State<_App> {
           labelSmall: TextThemes.neutral300.caption,
         ),
       ),
-      title: 'app-name',
+      title: 'Hockey Mob',
       key: const Key(''),
       debugShowCheckedModeBanner: false,
       routerConfig: _goRouter,
@@ -78,8 +78,7 @@ extension ThemeX on BuildContext {
   ThemeData get theme => Theme.of(this);
   TextTheme get textTheme => theme.textTheme;
   ColorScheme get colorScheme => theme.colorScheme;
-  TextStyle get displayLarge => textTheme.displayLarge!;
-  TextStyle get largeTitle => textTheme.displayMedium!;
+  TextStyle get largeTitle => textTheme.displayLarge!;
   TextStyle get title1 => textTheme.headlineLarge!;
   TextStyle get title1Bold =>
       textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w800);

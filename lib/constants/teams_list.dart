@@ -191,7 +191,7 @@ final nhlTeams = [
     id: '24',
     teamName: 'San Jose Sharks',
     largeLogo: Assets.icons.sanJoseSharksLarge.svg(),
-    smallLogol: Assets.icons.sanJoseSharks.svg(),
+    smallLogol: Assets.icons.sanJoseSharksSmall .svg(),
     primaryColor: const Color(0xFF006272),
     secondaryColor: const Color(0xFFE57200),
   ),
