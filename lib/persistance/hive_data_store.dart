@@ -11,7 +11,7 @@ class HiveDataStore {
   Future<void> init() async {
     await Hive.initFlutter();
 
-    Hive.registerAdapter<Team>(TeamAdapter(), override: true);
+    Hive.registerAdapter<Team>(TeamAdapter());
 
     await Hive.openBox<Team>(teamsBoxName);
   }

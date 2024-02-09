@@ -19,10 +19,10 @@ class TeamAdapter extends TypeAdapter<Team> {
     return Team(
       id: fields[0] as String,
       teamName: fields[1] as String,
-      largeLogo: fields[2] as SvgPicture,
-      smallLogol: fields[3] as SvgPicture,
-      primaryColor: fields[4] as Color,
-      secondaryColor: fields[5] as Color,
+      largeLogo: fields[2] as String,
+      smallLogol: fields[3] as String,
+      primaryColor: fields[4] as String,
+      secondaryColor: fields[5] as String,
     );
   }
 

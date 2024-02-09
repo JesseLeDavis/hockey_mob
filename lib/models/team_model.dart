@@ -1,6 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
 
 part 'team_model.g.dart';
@@ -20,16 +18,21 @@ class Team extends Equatable {
   @HiveField(1)
   final String teamName;
   @HiveField(2)
-  final SvgPicture largeLogo;
+  final String largeLogo;
   @HiveField(3)
-  final SvgPicture smallLogol;
+  final String smallLogol;
   @HiveField(4)
-  final Color primaryColor;
+  final String primaryColor;
   @HiveField(5)
-  final Color secondaryColor;
-
+  final String secondaryColor;
 
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [
+        id,
+        teamName,
+        largeLogo,
+        smallLogol,
+        primaryColor,
+        secondaryColor,
+      ];
 }

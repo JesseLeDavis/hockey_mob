@@ -8,6 +8,7 @@ import 'package:flutter_project_template_firebase/models/team_model.dart';
 import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
 import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class TeamsPage extends StatelessWidget {
@@ -64,7 +65,6 @@ class _TeamsViewState extends State<TeamsView> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: TeamContainer(
-                            followedTeams: state.followedTeamList,
                             team: team,
                           ),
                         ),
@@ -89,10 +89,8 @@ class TeamContainer extends StatefulWidget {
   const TeamContainer({
     super.key,
     required this.team,
-    required this.followedTeams,
   });
   final Team team;
-  final List<Team> followedTeams;
 
   @override
   State<TeamContainer> createState() => _TeamContainerState();
@@ -102,50 +100,56 @@ class _TeamContainerState extends State<TeamContainer> {
   @override
   Widget build(BuildContext context) {
     final team = widget.team;
-    final isSelectred = widget.followedTeams.contains(widget.team);
-
-    return GestureDetector(
-      onTap: () => context.pushNamed(
-        Paths.team.name,
-        pathParameters: {
-          'id': team.id,
-        },
-      ),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: ColorThemes.neutral800,
-        ),
-        width: double.infinity,
-        child: Row(
-          children: [
-            team.largeLogo,
-            gapW8,
-            Text(
-              team.teamName,
-              style: context.body,
+    final dataStore = getIt<HiveDataStore>();
+    return ValueListenableBuilder(
+      valueListenable: dataStore.teamsListenable(),
+      builder: (_, box, child) {
+        final isSelected = box.values.toList().contains(team);
+        return GestureDetector(
+          onTap: () => context.pushNamed(
+            Paths.team.name,
+            pathParameters: {
+              'id': team.id,
+            },
+          ),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: ColorThemes.neutral800,
             ),
-            const Spacer(),
-            GestureDetector(
-              onTap: () async {
-                await getIt<HiveDataStore>().toggleFavoriteTeam(team);
-              },
-              child: Container(
-                color: Colors.transparent,
-                width: 60,
-                height: 40,
-                child: Icon(
-                  Icons.star_rounded,
-                  color: isSelectred
-                      ? ColorThemes.neutral300
-                      : ColorThemes.neutral600,
+            width: double.infinity,
+            child:Row(
+              children: [
+                SvgPicture.asset(team.largeLogo),
+                gapW8,
+                Text(
+                  team.teamName,
+                  style: context.body,
                 ),
-              ),
+                const Spacer(),
+                GestureDetector(
+                  onTap: () async {
+                    await getIt<HiveDataStore>().toggleFavoriteTeam(team);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.transparent,
+                    width: 60,
+                    height: 40,
+                    child: Icon(
+                      Icons.star_rounded,
+                      color: isSelected
+                          ? ColorThemes.neutral300
+                          : ColorThemes.neutral600,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
