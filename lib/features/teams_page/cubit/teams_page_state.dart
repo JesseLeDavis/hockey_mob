@@ -4,5 +4,6 @@ part of 'teams_page_cubit.dart';
 class TeamsPageState with _$TeamsPageState {
   const factory TeamsPageState({
     required List<Team> teamsList,
+    required List<Team> followedTeamList,
   }) = _TeamPageState;
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_template_firebase/app/view/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 
 class FullStrength extends StatelessWidget {

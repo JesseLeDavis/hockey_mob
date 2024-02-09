@@ -62,7 +62,7 @@ class _CTextTheme implements _ITextTheme {
     );
 
     final displayLarge = _base.copyWith(
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w900,
       fontSize: 40,
     );
 

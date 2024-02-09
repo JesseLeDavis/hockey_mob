@@ -5,6 +5,7 @@ import 'package:flutter_project_template_firebase/constants/gaps.dart';
 import 'package:flutter_project_template_firebase/features/teams_page/cubit/teams_page_cubit.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/models/team_model.dart';
+import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
 import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 import 'package:go_router/go_router.dart';
@@ -37,13 +38,11 @@ class _TeamsViewState extends State<TeamsView> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            toolbarHeight: 90,
-            title: Row(
+            title: const Row(
               children: [
                 gapW4,
                 Text(
                   'Teams',
-                  style: context.largeTitle,
                 ),
               ],
             ),
@@ -65,6 +64,7 @@ class _TeamsViewState extends State<TeamsView> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: TeamContainer(
+                            followedTeams: state.followedTeamList,
                             team: team,
                           ),
                         ),
@@ -89,19 +89,20 @@ class TeamContainer extends StatefulWidget {
   const TeamContainer({
     super.key,
     required this.team,
+    required this.followedTeams,
   });
   final Team team;
+  final List<Team> followedTeams;
 
   @override
   State<TeamContainer> createState() => _TeamContainerState();
 }
 
 class _TeamContainerState extends State<TeamContainer> {
-  bool isSelectred = false;
-
   @override
   Widget build(BuildContext context) {
     final team = widget.team;
+    final isSelectred = widget.followedTeams.contains(widget.team);
 
     return GestureDetector(
       onTap: () => context.pushNamed(
@@ -127,14 +128,19 @@ class _TeamContainerState extends State<TeamContainer> {
             ),
             const Spacer(),
             GestureDetector(
-              onTap: () => setState(() {
-                isSelectred = !isSelectred;
-              }),
-              child: Icon(
-                Icons.star_rounded,
-                color: isSelectred
-                    ? ColorThemes.neutral300
-                    : ColorThemes.neutral600,
+              onTap: () async {
+                await getIt<HiveDataStore>().toggleFavoriteTeam(team);
+              },
+              child: Container(
+                color: Colors.transparent,
+                width: 60,
+                height: 40,
+                child: Icon(
+                  Icons.star_rounded,
+                  color: isSelectred
+                      ? ColorThemes.neutral300
+                      : ColorThemes.neutral600,
+                ),
               ),
             ),
           ],

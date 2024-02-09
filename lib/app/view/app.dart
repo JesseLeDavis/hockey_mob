@@ -43,7 +43,9 @@ class _AppState extends State<_App> {
     return MaterialApp.router(
       theme: ThemeData(
         scaffoldBackgroundColor: ColorThemes.pureBlack,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextThemes.neutral300.displayLarge,
+          toolbarHeight: 90,
           elevation: 0,
           backgroundColor: ColorThemes.neutral900,
         ),

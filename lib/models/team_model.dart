@@ -28,7 +28,6 @@ class Team extends Equatable {
   @HiveField(5)
   final Color secondaryColor;
 
-  void thisIsMyFuction() {}
 
   @override
   // TODO: implement props

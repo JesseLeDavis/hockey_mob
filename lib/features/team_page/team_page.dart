@@ -6,7 +6,6 @@ import 'package:flutter_project_template_firebase/constants/teams_list.dart';
 import 'package:flutter_project_template_firebase/features/team_page/componets/menu_row.dart';
 import 'package:flutter_project_template_firebase/features/team_page/cubit/team_page_cubit.dart';
 import 'package:flutter_project_template_firebase/features/team_page/lines_view/lines_view.dart';
-import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 import 'package:go_router/go_router.dart';
@@ -99,20 +98,5 @@ class TeamView extends StatelessWidget {
           child: CircularProgressIndicator(),
         );
     }
-  }
-}
-
-class name extends StatefulWidget {
-  const name({super.key});
-
-  @override
-  State<name> createState() => _nameState();
-}
-
-class _nameState extends State<name> {
-  int i = 5;
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

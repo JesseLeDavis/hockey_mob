@@ -6,17 +6,30 @@ import 'package:injectable/injectable.dart';
 
 @singleton
 class HiveDataStore {
-  static const teamsBoxName = 'teams';
+  static const teamsBoxName = 'followed_teams';
 
   Future<void> init() async {
     await Hive.initFlutter();
 
-    Hive.registerAdapter<Team>(TeamAdapter());
+    Hive.registerAdapter<Team>(TeamAdapter(), override: true);
 
     await Hive.openBox<Team>(teamsBoxName);
   }
 
+  Future<void> toggleFavoriteTeam(Team team) async {
+    final box = Hive.box<Team>(teamsBoxName);
+    if (box.values.toList().contains(team)) {
+      await box.delete(team.id);
+    } else {
+      await box.put(team.id, team);
+    }
+  }
+
   ValueListenable<Box<Team>> teamsListenable() {
     return Hive.box<Team>(teamsBoxName).listenable();
+  }
+
+  List<Team> selectedTeams() {
+    return Hive.box<Team>(teamsBoxName).values.toList();
   }
 }

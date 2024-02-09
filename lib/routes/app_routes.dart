@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_template_firebase/features/followed_teamd_page/followed_team_page.dart';
 import 'package:flutter_project_template_firebase/features/main_nav.dart';
 import 'package:flutter_project_template_firebase/features/team_page/team_page.dart';
 import 'package:flutter_project_template_firebase/features/teams_page/teams_page.dart';
@@ -20,6 +21,20 @@ List<RouteBase> appRoutes() {
               return FadeTransition(
                 opacity: animation,
                 child: const TeamsPage(),
+              );
+            },
+          ),
+        ),
+        GoRoute(
+          path: Paths.favoriteTeams.name,
+          name: Paths.favoriteTeams.name,
+          pageBuilder: (context, state) => CustomTransitionPage(
+            child: const FollowedTeamsPage(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: const FollowedTeamsPage(),
               );
             },
           ),

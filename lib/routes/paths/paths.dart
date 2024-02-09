@@ -5,6 +5,7 @@ class Paths {
 
   static MainNavPath get mainNav => MainNavPath();
   static TeamsPath get teams => TeamsPath();
+  static FavoriteTeamsPath get favoriteTeams => FavoriteTeamsPath();
   static TeamPath get team => TeamPath();
 }
 
@@ -14,6 +15,10 @@ class MainNavPath extends Path {
 
 class TeamsPath extends Path {
   TeamsPath() : super('teams');
+}
+
+class FavoriteTeamsPath extends Path {
+  FavoriteTeamsPath() : super('favorite-teams');
 }
 
 class TeamPath extends Path {

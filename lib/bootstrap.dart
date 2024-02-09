@@ -49,7 +49,8 @@ Future<void> bootstrap({
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );
 
-  // intialized data store
+  //* INITIALIZED DATA STORE 
+  
   await getIt<HiveDataStore>().init();
 
   await runZonedGuarded(

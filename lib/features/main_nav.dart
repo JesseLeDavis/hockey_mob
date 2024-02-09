@@ -52,7 +52,7 @@ class _MainNavViewState extends State<MainNavView> {
               context.goNamed(Paths.teams.name);
               break;
             case 2:
-              context.goNamed(Paths.teams.name);
+              context.goNamed(Paths.favoriteTeams.name);
               break;
             case 3:
               context.goNamed(Paths.teams.name);
