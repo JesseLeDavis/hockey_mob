@@ -3,8 +3,10 @@ import 'package:flutter_project_template_firebase/app/view/app.dart';
 import 'package:flutter_project_template_firebase/constants/gaps.dart';
 import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
 import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
+import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
 import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class FollowedTeamsPage extends StatelessWidget {
   const FollowedTeamsPage({super.key});
@@ -55,7 +57,14 @@ class FollowedTeamsView extends StatelessWidget {
                   color: Color(int.parse(team.primaryColor)),
                   child: InkWell(
                     borderRadius: _borderRadius,
-                    onTap: () {},
+                    onTap: () {
+                      context.pushNamed(
+                        Paths.team.name,
+                        pathParameters: {
+                          'id': team.id,
+                        },
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
