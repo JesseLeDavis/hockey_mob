@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_template_firebase/app/view/app.dart';
-import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/features/team_page/cubit/team_page_cubit.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:hockey_mob/app/view/app.dart';
+import 'package:hockey_mob/constants/gaps.dart';
+import 'package:hockey_mob/features/team_page/cubit/team_page_cubit.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 
 class MenuRow extends StatelessWidget {
   const MenuRow({

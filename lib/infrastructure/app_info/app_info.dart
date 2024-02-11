@@ -1,4 +1,4 @@
-import 'package:flutter_project_template_firebase/infrastructure/device_info/device_info.dart';
+import 'package:hockey_mob/infrastructure/device_info/device_info.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 abstract class AppInfo {

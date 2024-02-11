@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_project_template_firebase/infrastructure/config/flavor.dart';
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
-import 'package:flutter_project_template_firebase/routes/router.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
-import 'package:flutter_project_template_firebase/shared/themes/text_themes.dart';
+import 'package:hockey_mob/infrastructure/config/flavor.dart';
+import 'package:hockey_mob/infrastructure/injection/injection.dart';
+import 'package:hockey_mob/routes/router.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
+import 'package:hockey_mob/shared/themes/text_themes.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 

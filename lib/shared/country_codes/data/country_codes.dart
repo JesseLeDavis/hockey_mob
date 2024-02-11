@@ -1,7 +1,7 @@
 // Project imports:
 
 // Project imports:
-import 'package:flutter_project_template_firebase/shared/country_codes/models/country_code.model.dart';
+import 'package:hockey_mob/shared/country_codes/models/country_code.model.dart';
 
 final countryCodes = _codes.map(CountryCode.fromJson).toList();
 // ignore: constant_identifier_names

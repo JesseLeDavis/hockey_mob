@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_template_firebase/app/view/app.dart';
-import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/constants/teams_list.dart';
-import 'package:flutter_project_template_firebase/features/team_page/componets/menu_row.dart';
-import 'package:flutter_project_template_firebase/features/team_page/cubit/team_page_cubit.dart';
-import 'package:flutter_project_template_firebase/features/team_page/lines_view/lines_view.dart';
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hockey_mob/app/view/app.dart';
+import 'package:hockey_mob/constants/gaps.dart';
+import 'package:hockey_mob/constants/teams_list.dart';
+import 'package:hockey_mob/features/team_page/componets/menu_row.dart';
+import 'package:hockey_mob/features/team_page/cubit/team_page_cubit.dart';
+import 'package:hockey_mob/features/team_page/lines_view/lines_view.dart';
+import 'package:hockey_mob/gen/assets.gen.dart';
+import 'package:hockey_mob/infrastructure/injection/injection.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 import 'package:go_router/go_router.dart';
 
 class TeamPage extends StatelessWidget {
@@ -49,17 +51,28 @@ class TeamView extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () => context.pop(),
-                      child: const Icon(
-                        Icons.arrow_back,
-                      ),
+                      child: Assets.icons.leftLarge.svg(),
                     ),
                     gapW4,
                     Text(
-                      team.teamName,
+                      // TODO FIX IN TIME
+                      'Team',
                       style: context.largeTitle,
                     ),
                   ],
                 ),
+                actions: [
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Assets.icons.plus.svg(),
+                      ),
+                      SvgPicture.asset(team.largeLogo),
+                      gapW16,
+                    ],
+                  )
+                ],
               ),
               body: Column(
                 children: [

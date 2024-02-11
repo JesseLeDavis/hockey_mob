@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/features/followed_teamd_page/followed_teams_page.dart';
-import 'package:flutter_project_template_firebase/features/main_nav.dart';
-import 'package:flutter_project_template_firebase/features/team_page/team_page.dart';
-import 'package:flutter_project_template_firebase/features/teams_page/teams_page.dart';
-import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
+import 'package:hockey_mob/features/followed_teamd_page/followed_teams_page.dart';
+import 'package:hockey_mob/features/main_nav.dart';
+import 'package:hockey_mob/features/team_page/team_page.dart';
+import 'package:hockey_mob/features/teams_page/teams_page.dart';
+import 'package:hockey_mob/routes/paths/paths.dart';
 
 import 'package:go_router/go_router.dart';
 

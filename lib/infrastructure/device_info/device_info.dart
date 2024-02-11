@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:flutter_project_template_firebase/infrastructure/device_info/type/device_sizes.model.dart';
+import 'package:hockey_mob/infrastructure/device_info/type/device_sizes.model.dart';
 
 enum DeviceMake {
   android,

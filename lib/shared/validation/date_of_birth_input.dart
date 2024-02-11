@@ -1,4 +1,4 @@
-import 'package:flutter_project_template_firebase/infrastructure/helpers/extensions/string_extensions.dart';
+import 'package:hockey_mob/infrastructure/helpers/extensions/string_extensions.dart';
 import 'package:formz/formz.dart';
 
 enum DateOfBirthInputError { empty, invalid, young }

@@ -5,8 +5,8 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter_project_template_firebase/app/app.dart';
-import 'package:flutter_project_template_firebase/infrastructure/config/flavor.dart';
+import 'package:hockey_mob/app/app.dart';
+import 'package:hockey_mob/infrastructure/config/flavor.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 

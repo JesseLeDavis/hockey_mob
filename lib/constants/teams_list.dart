@@ -1,5 +1,5 @@
-import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
-import 'package:flutter_project_template_firebase/models/team_model.dart';
+import 'package:hockey_mob/gen/assets.gen.dart';
+import 'package:hockey_mob/models/team_model.dart';
 
 final nhlTeams = [
   Team(

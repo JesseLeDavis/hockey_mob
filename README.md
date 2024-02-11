@@ -1,4 +1,4 @@
-# flutter_project_template_firebase
+# hockey_mob
 
 A new Flutter project.
 

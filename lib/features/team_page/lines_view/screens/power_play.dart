@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/app/view/app.dart';
-import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:hockey_mob/app/view/app.dart';
+import 'package:hockey_mob/constants/gaps.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 
 class PowerPlay extends StatelessWidget {
   const PowerPlay({

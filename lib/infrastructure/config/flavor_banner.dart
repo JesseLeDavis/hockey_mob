@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/infrastructure/config/flavor.dart';
+import 'package:hockey_mob/infrastructure/config/flavor.dart';
 
 class FlavorBanner extends StatelessWidget {
   const FlavorBanner({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/gen/assets.gen.dart';
-import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:hockey_mob/gen/assets.gen.dart';
+import 'package:hockey_mob/routes/paths/paths.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 import 'package:go_router/go_router.dart';
 
 class MainNavPage extends StatelessWidget {

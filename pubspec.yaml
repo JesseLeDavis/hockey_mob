@@ -1,7 +1,7 @@
-name: flutter_project_template_firebase
+name: hockey_mob
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: A hockey app.
 environment: 
   sdk: '>=2.18.6 <3.0.0'
 dependencies: 

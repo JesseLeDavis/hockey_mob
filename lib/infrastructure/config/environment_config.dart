@@ -1,4 +1,4 @@
-import 'package:flutter_project_template_firebase/infrastructure/config/app_environment.dart';
+import 'package:hockey_mob/infrastructure/config/app_environment.dart';
 
 class EnvironmentConfig {
   static AppEnvironment appEnvironment = AppEnvironmentString.fromString(

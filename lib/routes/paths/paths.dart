@@ -1,4 +1,4 @@
-import 'package:flutter_project_template_firebase/routes/paths/path.dart';
+import 'package:hockey_mob/routes/paths/path.dart';
 
 class Paths {
   const Paths._();

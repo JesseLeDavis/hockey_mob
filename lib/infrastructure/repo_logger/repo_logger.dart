@@ -1,4 +1,4 @@
-// import 'package:flutter_project_template_firebase/infrastructure/repo_logger/get_method_info.dart';
+// import 'package:hockey_mob/infrastructure/repo_logger/get_method_info.dart';
 // import 'package:injectable/injectable.dart';
 // import 'package:logger/logger.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 
 class ProgressDots extends StatelessWidget {
   const ProgressDots({

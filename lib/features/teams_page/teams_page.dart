@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_template_firebase/app/app.dart';
-import 'package:flutter_project_template_firebase/constants/gaps.dart';
-import 'package:flutter_project_template_firebase/features/teams_page/cubit/teams_page_cubit.dart';
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
-import 'package:flutter_project_template_firebase/models/team_model.dart';
-import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
-import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
-import 'package:flutter_project_template_firebase/shared/themes/color_themes.dart';
+import 'package:hockey_mob/app/app.dart';
+import 'package:hockey_mob/constants/gaps.dart';
+import 'package:hockey_mob/features/teams_page/cubit/teams_page_cubit.dart';
+import 'package:hockey_mob/infrastructure/injection/injection.dart';
+import 'package:hockey_mob/models/team_model.dart';
+import 'package:hockey_mob/persistance/hive_data_store.dart';
+import 'package:hockey_mob/routes/paths/paths.dart';
+import 'package:hockey_mob/shared/themes/color_themes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -106,12 +107,14 @@ class _TeamContainerState extends State<TeamContainer> {
       builder: (_, box, child) {
         final isSelected = box.values.toList().contains(team);
         return GestureDetector(
-          onTap: () => context.pushNamed(
-            Paths.team.name,
-            pathParameters: {
-              'id': team.id,
-            },
-          ),
+          onTap: () {
+            context.pushNamed(
+              Paths.team.name,
+              pathParameters: {
+                'id': team.id,
+              },
+            );
+          },
           child: Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -119,7 +122,7 @@ class _TeamContainerState extends State<TeamContainer> {
               color: ColorThemes.neutral800,
             ),
             width: double.infinity,
-            child:Row(
+            child: Row(
               children: [
                 SvgPicture.asset(team.largeLogo),
                 gapW8,
@@ -130,10 +133,11 @@ class _TeamContainerState extends State<TeamContainer> {
                 const Spacer(),
                 GestureDetector(
                   onTap: () async {
+                    await HapticFeedback.heavyImpact();
                     await getIt<HiveDataStore>().toggleFavoriteTeam(team);
                   },
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     color: Colors.transparent,
                     width: 60,
                     height: 40,

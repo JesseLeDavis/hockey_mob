@@ -1,7 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection.config.dart';
+import 'package:hockey_mob/infrastructure/injection/injection.config.dart';
 
 // Project imports:
 

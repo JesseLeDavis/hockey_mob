@@ -1,4 +1,4 @@
-package com.example.flutter_project_template_firebase
+package com.example.hockey_mob
 
 import io.flutter.embedding.android.FlutterActivity
 

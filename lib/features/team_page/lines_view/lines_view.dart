@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project_template_firebase/componets/progress_dots.dart';
-import 'package:flutter_project_template_firebase/features/team_page/cubit/team_page_cubit.dart';
-import 'package:flutter_project_template_firebase/features/team_page/lines_view/screens/full_strength.dart';
-import 'package:flutter_project_template_firebase/features/team_page/lines_view/screens/power_play.dart';
+import 'package:hockey_mob/componets/progress_dots.dart';
+import 'package:hockey_mob/features/team_page/cubit/team_page_cubit.dart';
+import 'package:hockey_mob/features/team_page/lines_view/screens/full_strength.dart';
+import 'package:hockey_mob/features/team_page/lines_view/screens/power_play.dart';
 
 class LinesView extends StatelessWidget {
   const LinesView({
@@ -74,7 +74,7 @@ class LinesView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 25,
-                    right: 0,
+                    right: 16,
                     child: ProgressDots(
                       currentStep: loaded.currentStep,
                       totalSteps: loaded.totalSteps,

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/routes/app_routes.dart';
-import 'package:flutter_project_template_firebase/routes/paths/paths.dart';
+import 'package:hockey_mob/routes/app_routes.dart';
+import 'package:hockey_mob/routes/paths/paths.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 

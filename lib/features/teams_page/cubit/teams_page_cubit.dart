@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_project_template_firebase/constants/teams_list.dart';
-import 'package:flutter_project_template_firebase/infrastructure/injection/injection.dart';
-import 'package:flutter_project_template_firebase/models/team_model.dart';
-import 'package:flutter_project_template_firebase/persistance/hive_data_store.dart';
+import 'package:hockey_mob/constants/teams_list.dart';
+import 'package:hockey_mob/infrastructure/injection/injection.dart';
+import 'package:hockey_mob/models/team_model.dart';
+import 'package:hockey_mob/persistance/hive_data_store.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -15,9 +15,7 @@ class TeamsPageCubit extends Cubit<TeamsPageState> {
       : super(
           TeamsPageState(
             teamsList: nhlTeams,
-            followedTeamList:
-                getIt<HiveDataStore>().selectedTeams(),
-                
+            followedTeamList: getIt<HiveDataStore>().selectedTeams(),
           ),
         );
 }

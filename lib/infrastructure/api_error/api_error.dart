@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/infrastructure/local_notification/local_notification_service.dart';
+import 'package:hockey_mob/infrastructure/local_notification/local_notification_service.dart';
 
 enum ApiError {
   unknownError,

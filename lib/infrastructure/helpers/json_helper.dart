@@ -1,6 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template_firebase/infrastructure/api_error/api_error.dart';
+import 'package:hockey_mob/infrastructure/api_error/api_error.dart';
 
 // Package imports:
 import 'package:intl/intl.dart';
