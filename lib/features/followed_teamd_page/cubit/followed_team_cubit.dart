@@ -5,5 +5,5 @@ part 'followed_team_state.dart';
 part 'followed_team_cubit.freezed.dart';
 
 class FollowedTeamCubit extends Cubit<FollowedTeamState> {
-  FollowedTeamCubit() : super(FollowedTeamState.initial());
+  FollowedTeamCubit() : super(const FollowedTeamState.initial());
 }

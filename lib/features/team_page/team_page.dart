@@ -71,7 +71,7 @@ class TeamView extends StatelessWidget {
                       SvgPicture.asset(team.largeLogo),
                       gapW16,
                     ],
-                  )
+                  ),
                 ],
               ),
               body: Column(

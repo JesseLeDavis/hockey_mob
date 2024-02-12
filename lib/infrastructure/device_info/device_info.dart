@@ -145,13 +145,13 @@ class _IOSData implements _DeviceData {
   final IosDeviceInfo _data;
 
   @override
-  String get make => _data.model ?? 'ios device';
+  String get make => _data.model;
 
   @override
-  String get os => _data.systemVersion ?? 'version';
+  String get os => _data.systemVersion;
 
   @override
-  String get device => _data.utsname.machine ?? 'physical phone';
+  String get device => _data.utsname.machine;
 }
 
 class _WebData implements _DeviceData {

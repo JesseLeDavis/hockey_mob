@@ -4,7 +4,6 @@ import 'package:hockey_mob/constants/gaps.dart';
 import 'package:hockey_mob/infrastructure/injection/injection.dart';
 import 'package:hockey_mob/persistance/hive_data_store.dart';
 import 'package:hockey_mob/routes/paths/paths.dart';
-import 'package:hockey_mob/shared/themes/color_themes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 

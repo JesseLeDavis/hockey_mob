@@ -36,6 +36,11 @@ class _MainNavViewState extends State<MainNavView> {
 
   @override
   Widget build(BuildContext context) {
+    const _navColor = ColorFilter.mode(
+      ColorThemes.neutral700,
+      BlendMode.srcIn,
+    );
+
     return Scaffold(
       body: widget.child,
       bottomNavigationBar: BottomNavigationBar(
@@ -66,22 +71,27 @@ class _MainNavViewState extends State<MainNavView> {
         selectedFontSize: 12,
         items: [
           BottomNavigationBarItem(
-            icon: Assets.icons.scoreboard.svg(color: ColorThemes.neutral700),
+            icon: Assets.icons.scoreboard.svg(
+              colorFilter: const ColorFilter.mode(
+                ColorThemes.neutral700,
+                BlendMode.srcIn,
+              ),
+            ),
             activeIcon: Assets.icons.scoreboard.svg(),
             label: 'Games',
           ),
           BottomNavigationBarItem(
-            icon: Assets.icons.puck.svg(color: ColorThemes.neutral700),
+            icon: Assets.icons.puck.svg(colorFilter: _navColor),
             activeIcon: Assets.icons.puck.svg(),
             label: 'Teams',
           ),
           BottomNavigationBarItem(
-            icon: Assets.icons.star.svg(color: ColorThemes.neutral700),
+            icon: Assets.icons.star.svg(colorFilter: _navColor),
             activeIcon: Assets.icons.star.svg(),
             label: 'Following',
           ),
           BottomNavigationBarItem(
-            icon: Assets.icons.hamburger.svg(color: ColorThemes.neutral700),
+            icon: Assets.icons.hamburger.svg(colorFilter: _navColor),
             activeIcon: Assets.icons.hamburger.svg(),
             label: 'Following',
           ),
