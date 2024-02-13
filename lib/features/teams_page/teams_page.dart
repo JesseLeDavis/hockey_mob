@@ -111,7 +111,7 @@ class _TeamContainerState extends State<TeamContainer> {
             context.pushNamed(
               Paths.team.name,
               pathParameters: {
-                'id': team.id,
+                'id': team.id.toString(),
               },
             );
           },
@@ -127,7 +127,7 @@ class _TeamContainerState extends State<TeamContainer> {
                 SvgPicture.asset(team.largeLogo),
                 gapW8,
                 Text(
-                  team.teamName,
+                  team.combinedName,
                   style: context.body,
                 ),
                 const Spacer(),

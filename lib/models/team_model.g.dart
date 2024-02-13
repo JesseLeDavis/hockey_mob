@@ -17,7 +17,7 @@ class TeamAdapter extends TypeAdapter<Team> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Team(
-      id: fields[0] as String,
+      id: fields[0] as int,
       teamName: fields[7] as String,
       largeLogo: fields[2] as String,
       smallLogol: fields[3] as String,
@@ -25,13 +25,14 @@ class TeamAdapter extends TypeAdapter<Team> {
       secondaryColor: fields[5] as String,
       combinedName: fields[1] as String,
       teamLocation: fields[6] as String,
+      teamAbr: fields[8] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, Team obj) {
     writer
-      ..writeByte(8)
+      ..writeByte(9)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -47,7 +48,9 @@ class TeamAdapter extends TypeAdapter<Team> {
       ..writeByte(6)
       ..write(obj.teamLocation)
       ..writeByte(7)
-      ..write(obj.teamName);
+      ..write(obj.teamName)
+      ..writeByte(8)
+      ..write(obj.teamAbr);
   }
 
   @override

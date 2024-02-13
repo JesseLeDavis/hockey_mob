@@ -21,7 +21,7 @@ class TeamPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => getIt<TeamPageCubit>(),
       child: TeamView(
-        id: id,
+        id: int.parse(id),
       ),
     );
   }
@@ -33,7 +33,7 @@ class TeamView extends StatelessWidget {
     required this.id,
   });
 
-  final String id;
+  final int id;
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +55,7 @@ class TeamView extends StatelessWidget {
                     ),
                     gapW4,
                     Text(
-                      // TODO FIX IN TIME
-                      'Team',
+                      team.teamLocation,
                       style: context.largeTitle,
                     ),
                   ],

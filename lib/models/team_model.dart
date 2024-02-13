@@ -17,7 +17,7 @@ class Team extends Equatable {
     required this.teamAbr,
   });
   @HiveField(0)
-  final String id;
+  final int id;
   @HiveField(1)
   final String combinedName;
   @HiveField(2)

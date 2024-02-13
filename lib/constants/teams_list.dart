@@ -3,7 +3,7 @@ import 'package:hockey_mob/models/team_model.dart';
 
 final nhlTeams = [
   Team(
-    id: '1',
+    id: 1,
     combinedName: 'Anaheim Ducks',
     largeLogo: Assets.icons.anaheimDucksLarge.path,
     smallLogol: Assets.icons.anaheimDucksSmall.path,
@@ -14,7 +14,7 @@ final nhlTeams = [
     teamAbr: 'ANA',
   ),
   Team(
-    id: '2',
+    id: 2,
     combinedName: 'Arizona Coyotes',
     largeLogo: Assets.icons.arizonaCoyotesLarge.path,
     smallLogol: Assets.icons.arizonaCoyotesLarge.path,
@@ -25,7 +25,7 @@ final nhlTeams = [
     teamAbr: 'ARI',
   ),
   Team(
-    id: '3',
+    id: 3,
     combinedName: 'Boston Bruins',
     largeLogo: Assets.icons.bostonBruinsLarge.path,
     smallLogol: Assets.icons.bostonBruinsLarge.path,
@@ -36,7 +36,7 @@ final nhlTeams = [
     teamAbr: 'BOS',
   ),
   Team(
-    id: '4',
+    id: 4,
     combinedName: 'Buffalo Sabres',
     largeLogo: Assets.icons.buffaloSabresLarge.path,
     smallLogol: Assets.icons.buffaloSabresSmall.path,
@@ -47,7 +47,7 @@ final nhlTeams = [
     teamAbr: 'BUF',
   ),
   Team(
-    id: '5',
+    id: 5,
     combinedName: 'Calgary Flames',
     largeLogo: Assets.icons.calgaryFlamesLarge.path,
     smallLogol: Assets.icons.calgaryFlamesSmall.path,
@@ -58,7 +58,7 @@ final nhlTeams = [
     teamAbr: 'CGY',
   ),
   Team(
-    id: '6',
+    id: 6,
     combinedName: 'Carolina Hurricanes',
     largeLogo: Assets.icons.carolinaHurricanesLarge.path,
     smallLogol: Assets.icons.carolinaHurricanesLarge.path,
@@ -69,7 +69,7 @@ final nhlTeams = [
     teamAbr: 'CAR',
   ),
   Team(
-    id: '7',
+    id: 7,
     combinedName: 'Chicago Blackhawks',
     largeLogo: Assets.icons.chicagoBlackhawksLarge.path,
     smallLogol: Assets.icons.chicagoBlackhawksSmall.path,
@@ -80,7 +80,7 @@ final nhlTeams = [
     teamAbr: 'CHI',
   ),
   Team(
-    id: '8',
+    id: 8,
     combinedName: 'Colorado Avalanche',
     largeLogo: Assets.icons.coloradoAvalancheLarge.path,
     smallLogol: Assets.icons.coloradoAvalancheSmall.path,
@@ -91,7 +91,7 @@ final nhlTeams = [
     teamAbr: 'COL',
   ),
   Team(
-    id: '9',
+    id: 9,
     combinedName: 'Columbus Blue Jackets',
     largeLogo: Assets.icons.colombusBlueJacketsLarge.path,
     smallLogol: Assets.icons.colombusBlueJacketsSmall.path,
@@ -102,7 +102,7 @@ final nhlTeams = [
     teamAbr: 'CBJ',
   ),
   Team(
-    id: '10',
+    id: 10,
     combinedName: 'Dallas Stars',
     largeLogo: Assets.icons.dallasStarsLarge.path,
     smallLogol: Assets.icons.dallasStarsSmall.path,
@@ -113,7 +113,7 @@ final nhlTeams = [
     teamAbr: 'DAL',
   ),
   Team(
-    id: '11',
+    id: 11,
     combinedName: 'Detroit Red Wings',
     largeLogo: Assets.icons.detroitRedWingsLarge.path,
     smallLogol: Assets.icons.detroitRedWingsLarge.path,
@@ -124,7 +124,7 @@ final nhlTeams = [
     teamAbr: 'DET',
   ),
   Team(
-    id: '12',
+    id: 12,
     combinedName: 'Edmonton Oilers',
     largeLogo: Assets.icons.edmontonOilersLarge.path,
     smallLogol: Assets.icons.edmontonOilersLarge.path,
@@ -135,7 +135,7 @@ final nhlTeams = [
     teamAbr: 'EDM',
   ),
   Team(
-    id: '13',
+    id: 13,
     combinedName: 'Florida Panthers',
     largeLogo: Assets.icons.floridaPanthersLarge.path,
     smallLogol: Assets.icons.floridaPanthersLarge.path,
@@ -146,7 +146,7 @@ final nhlTeams = [
     teamAbr: 'FLA',
   ),
   Team(
-    id: '14',
+    id: 14,
     combinedName: 'Los Angeles Kings',
     largeLogo: Assets.icons.losAngelesLarge.path,
     smallLogol: Assets.icons.losAngelesKingsSmall.path,
@@ -157,7 +157,7 @@ final nhlTeams = [
     teamAbr: 'LA',
   ),
   Team(
-    id: '15',
+    id: 15,
     combinedName: 'Minnesota Wild',
     largeLogo: Assets.icons.minnesotaWildLarge.path,
     smallLogol: Assets.icons.minnesotaWildLarge.path,
@@ -168,7 +168,7 @@ final nhlTeams = [
     teamAbr: 'MIN',
   ),
   Team(
-    id: '16',
+    id: 16,
     combinedName: 'Montreal Canadiens',
     largeLogo: Assets.icons.montrealCanadiens.path,
     smallLogol: Assets.icons.montrealCanadiensSmall.path,
@@ -179,7 +179,7 @@ final nhlTeams = [
     teamAbr: 'MTL',
   ),
   Team(
-    id: '17',
+    id: 17,
     combinedName: 'Nashville Predators',
     largeLogo: Assets.icons.nashvillePredatorsLarge.path,
     smallLogol: Assets.icons.nashvillePredatorsSmall.path,
@@ -190,7 +190,7 @@ final nhlTeams = [
     teamAbr: 'NSH',
   ),
   Team(
-    id: '18',
+    id: 18,
     combinedName: 'New Jersey Devils',
     largeLogo: Assets.icons.newJerseyDevilsLarge.path,
     smallLogol: Assets.icons.newJerseyDevilsSmall.path,
@@ -201,7 +201,7 @@ final nhlTeams = [
     teamAbr: 'NJ',
   ),
   Team(
-    id: '19',
+    id: 19,
     combinedName: 'New York Islanders',
     largeLogo: Assets.icons.newYorkIslandersLarge.path,
     smallLogol: Assets.icons.newYorkIslandersSmall.path,
@@ -212,7 +212,7 @@ final nhlTeams = [
     teamAbr: 'NYI',
   ),
   Team(
-    id: '20',
+    id: 20,
     combinedName: 'New York Rangers',
     largeLogo: Assets.icons.newYorkRangersLarge.path,
     smallLogol: Assets.icons.newYorkRangersSmall.path,
@@ -223,7 +223,7 @@ final nhlTeams = [
     teamAbr: 'NYR',
   ),
   Team(
-    id: '21',
+    id: 21,
     combinedName: 'Ottawa Senators',
     largeLogo: Assets.icons.ottawaSenatorsLarge.path,
     smallLogol: Assets.icons.ottawaSenatorsSmall.path,
@@ -234,7 +234,7 @@ final nhlTeams = [
     teamAbr: 'OTT',
   ),
   Team(
-    id: '22',
+    id: 22,
     combinedName: 'Philadelphia Flyers',
     largeLogo: Assets.icons.philadelphiaFlyersLarge.path,
     smallLogol: Assets.icons.philadelphiaFlyersSmall.path,
@@ -245,7 +245,7 @@ final nhlTeams = [
     teamAbr: 'PHI',
   ),
   Team(
-    id: '23',
+    id: 23,
     combinedName: 'Pittsburgh Penguins',
     largeLogo: Assets.icons.pittsburghPenguinsLarge.path,
     smallLogol: Assets.icons.pittsburghPenguinsSmall.path,
@@ -256,7 +256,7 @@ final nhlTeams = [
     teamAbr: 'PIT',
   ),
   Team(
-    id: '24',
+    id: 24,
     combinedName: 'San Jose Sharks',
     largeLogo: Assets.icons.sanJoseSharksLarge.path,
     smallLogol: Assets.icons.sanJoseSharksSmall.path,
@@ -267,7 +267,7 @@ final nhlTeams = [
     teamAbr: 'SJ',
   ),
   Team(
-    id: '25',
+    id: 25,
     combinedName: 'Seattle Kraken',
     largeLogo: Assets.icons.seattleKrakenLarge.path,
     smallLogol: Assets.icons.seattleKrakenSmall.path,
@@ -278,7 +278,7 @@ final nhlTeams = [
     teamAbr: 'SEA',
   ),
   Team(
-    id: '26',
+    id: 26,
     combinedName: 'St. Louis Blues',
     largeLogo: Assets.icons.stLouisBluesLarge.path,
     smallLogol: Assets.icons.stLouisBluesSmall.path,
@@ -289,7 +289,7 @@ final nhlTeams = [
     teamAbr: 'STL',
   ),
   Team(
-    id: '27',
+    id: 27,
     combinedName: 'Tampa Bay Lightning',
     largeLogo: Assets.icons.tampaBayLightningLarge.path,
     smallLogol: Assets.icons.tampaBayLightningSmall.path,
@@ -300,7 +300,7 @@ final nhlTeams = [
     teamAbr: 'TB',
   ),
   Team(
-    id: '28',
+    id: 28,
     combinedName: 'Toronto Maple Leafs',
     largeLogo: Assets.icons.torontoMapleLeafsLarge.path,
     smallLogol: Assets.icons.torontoMapleLeafsSmall.path,
@@ -311,7 +311,7 @@ final nhlTeams = [
     teamAbr: 'TOR',
   ),
   Team(
-    id: '29',
+    id: 29,
     combinedName: 'Vancouver Canucks',
     largeLogo: Assets.icons.vancouverCanucksLarge.path,
     smallLogol: Assets.icons.vancouverCanucksSmall.path,
@@ -322,7 +322,7 @@ final nhlTeams = [
     teamAbr: 'VAN',
   ),
   Team(
-    id: '30',
+    id: 30,
     combinedName: 'Vegas Golden Knights',
     largeLogo: Assets.icons.vegasGoldenKnightsLarge.path,
     smallLogol: Assets.icons.vegasGoldenKnightsSmall.path,
@@ -333,7 +333,7 @@ final nhlTeams = [
     teamAbr: 'VGK',
   ),
   Team(
-    id: '31',
+    id: 31,
     combinedName: 'Washington Capitals',
     largeLogo: Assets.icons.washingtonCapitalsLarge.path,
     smallLogol: Assets.icons.washingtonCapitalsSmall.path,
@@ -344,7 +344,7 @@ final nhlTeams = [
     teamAbr: 'WSH',
   ),
   Team(
-    id: '32',
+    id: 32,
     combinedName: 'Winnipeg Jets',
     largeLogo: Assets.icons.winnipegJetsLarge.path,
     smallLogol: Assets.icons.winnipegJetsSmall.path,
