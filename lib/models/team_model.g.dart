@@ -18,22 +18,24 @@ class TeamAdapter extends TypeAdapter<Team> {
     };
     return Team(
       id: fields[0] as String,
-      teamName: fields[1] as String,
+      teamName: fields[7] as String,
       largeLogo: fields[2] as String,
       smallLogol: fields[3] as String,
       primaryColor: fields[4] as String,
       secondaryColor: fields[5] as String,
+      combinedName: fields[1] as String,
+      teamLocation: fields[6] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, Team obj) {
     writer
-      ..writeByte(6)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.teamName)
+      ..write(obj.combinedName)
       ..writeByte(2)
       ..write(obj.largeLogo)
       ..writeByte(3)
@@ -41,7 +43,11 @@ class TeamAdapter extends TypeAdapter<Team> {
       ..writeByte(4)
       ..write(obj.primaryColor)
       ..writeByte(5)
-      ..write(obj.secondaryColor);
+      ..write(obj.secondaryColor)
+      ..writeByte(6)
+      ..write(obj.teamLocation)
+      ..writeByte(7)
+      ..write(obj.teamName);
   }
 
   @override
